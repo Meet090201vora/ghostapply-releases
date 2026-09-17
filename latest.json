@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
-  "notes": "Early Access: Dice profile wizard, resume upload, license check.",
+  "version": "0.2.1",
+  "notes": "First launch auto-installs the engine (no Terminal). License Activate fix. Clean profiles.",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
 }
