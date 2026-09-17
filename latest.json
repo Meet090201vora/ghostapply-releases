@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
-  "notes": "First launch auto-installs the engine (no Terminal). License Activate fix. Clean profiles.",
+  "version": "0.2.2",
+  "notes": "Mac fix: engine installs via tar.gz; Windows zip uses forward-slash paths.",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
 }
