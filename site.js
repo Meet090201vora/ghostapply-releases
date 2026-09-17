@@ -65,32 +65,51 @@ function footerHTML() {
 document.getElementById("site-header").outerHTML = headerHTML();
 document.getElementById("site-footer").outerHTML = footerHTML();
 
-// Point the download buttons at the newest installers on GitHub Releases.
-// If the API call fails (rate limit, offline), the buttons keep their default
-// href — the releases page — so downloads always work.
-const RELEASES_API = "https://api.github.com/repos/Meet090201vora/ghostapply-releases/releases/latest";
+// Direct file downloads (Cursor-style): never send users to a GitHub page.
+// Asset URLs force a file download; no source code or release notes are shown.
+const DOWNLOAD_BASE =
+  "https://github.com/Meet090201vora/ghostapply-releases/releases/latest/download";
+const RELEASES_API =
+  "https://api.github.com/repos/Meet090201vora/ghostapply-releases/releases/latest";
+
+function setDownload(el, url, filename) {
+  if (!el || !url) return;
+  el.href = url;
+  el.setAttribute("download", filename || "");
+  el.removeAttribute("target");
+}
 
 async function wireDownloadLinks() {
   const win = document.querySelector("#dl-windows");
   const mac = document.querySelector("#dl-mac");
-  if (!win && !mac) return;
+  const linux = document.querySelector("#dl-linux");
+  if (!win && !mac && !linux) return;
+
+  // Safe defaults: /latest/download/<name> redirects to the file itself.
+  setDownload(win, `${DOWNLOAD_BASE}/GhostApply_0.2.0_x64-setup.exe`, "GhostApply_0.2.0_x64-setup.exe");
+  setDownload(mac, `${DOWNLOAD_BASE}/GhostApply_0.2.0_universal.dmg`, "GhostApply_0.2.0_universal.dmg");
+  setDownload(linux, `${DOWNLOAD_BASE}/GhostApply_0.2.0_amd64.AppImage`, "GhostApply_0.2.0_amd64.AppImage");
+
   try {
     const response = await fetch(RELEASES_API);
     if (!response.ok) throw new Error(response.statusText);
     const release = await response.json();
     const assets = release.assets || [];
-    const find = (ext) => assets.find((a) => a.name.toLowerCase().endsWith(ext));
-    const winAsset = find(".exe");
-    const macAsset = find(".dmg");
-    if (win && winAsset) win.href = winAsset.browser_download_url;
-    if (mac && macAsset) mac.href = macAsset.browser_download_url;
+    const pick = (test) => assets.find((a) => test(a.name.toLowerCase()));
+    // Installers only — never wire engine.zip or source archives.
+    const winAsset = pick((n) => n.endsWith("-setup.exe") || (n.endsWith(".exe") && !n.includes("engine")));
+    const macAsset = pick((n) => n.endsWith(".dmg"));
+    const linuxAsset = pick((n) => n.endsWith(".appimage"));
+    if (winAsset) setDownload(win, winAsset.browser_download_url, winAsset.name);
+    if (macAsset) setDownload(mac, macAsset.browser_download_url, macAsset.name);
+    if (linuxAsset) setDownload(linux, linuxAsset.browser_download_url, linuxAsset.name);
     const version = (release.tag_name || "").replace(/^v/, "");
     const fine = document.querySelector("#dl-version");
     if (fine && version) {
-      fine.textContent = `Version ${version} · Early Access · downloads served from GitHub Releases.`;
+      fine.textContent = `Version ${version} · Early Access`;
     }
   } catch {
-    // keep fallback links
+    // Defaults above already point at the installer files.
   }
 }
 wireDownloadLinks();
