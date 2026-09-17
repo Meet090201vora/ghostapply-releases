@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — GhostApply</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <section class="section">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h1>Write us.</h1>
+            <p class="lede">Licenses, a stuck Windows build, or a board you want next. We read this.</p>
+            <p class="muted">Swap the preview form for Formspree, Loops, or your inbox before you launch. Until then it confirms on the page only.</p>
+          </div>
+          <form id="contact-form" class="panel stack">
+            <label>Name <input name="name" required /></label>
+            <label>Email <input name="email" type="email" required /></label>
+            <label>Topic
+              <select name="topic">
+                <option>Billing &amp; license</option>
+                <option>Download / install</option>
+                <option>Dice run</option>
+                <option>Press / partnership</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label>Message <textarea name="message" rows="5" required></textarea></label>
+            <button class="btn btn-primary" type="submit">Send</button>
+            <p id="contact-status" class="notice">We answer from the same address that sends GA1 keys.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="site.js"></script>
+  </body>
+</html>

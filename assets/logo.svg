@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="GhostApply">
+  <rect width="128" height="128" rx="28" fill="#0b0c0f"/>
+  <path d="M64 22c-19 0-34 15-34 36v30c0 5 3.5 7.5 7.5 5.5L48 86l8 8 8-8 8 8 10.5-7.5c4 2 7.5-.5 7.5-5.5V58C98 37 83 22 64 22z" fill="#eceae4"/>
+  <ellipse cx="54" cy="56" rx="5.5" ry="6.5" fill="#0b0c0f"/>
+  <ellipse cx="74" cy="56" rx="5.5" ry="6.5" fill="#0b0c0f"/>
+  <rect x="46" y="72" width="36" height="24" rx="4" fill="#c9a36a"/>
+  <rect x="48" y="74" width="32" height="20" rx="3" fill="#0b0c0f"/>
+  <path d="M56 72v-6c0-4.5 16-4.5 16 0v6" fill="none" stroke="#c9a36a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="61" y="82" width="6" height="5" rx="1" fill="#8fd4b0"/>
+</svg>

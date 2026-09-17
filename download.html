@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Download — GhostApply</title>
+    <meta name="description" content="Download GhostApply for Windows. Early Access desktop app for Dice Easy Apply." />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <section class="hero">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Download</p>
+            <h1>GhostApply for your <span style="color:var(--ghost)">desk</span></h1>
+            <p class="lede">Grab the installer for your computer. Windows and macOS installers are built and hosted on GitHub — always the latest version.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="dl-windows" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Windows · Installer</a>
+              <a class="btn btn-primary" id="dl-mac" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">macOS · DMG</a>
+              <a class="btn btn-ghost" href="pricing.html">Buy a license</a>
+            </div>
+            <p class="fine" id="dl-version">Early Access. Downloads are served from GitHub Releases.</p>
+          </div>
+          <div class="panel">
+            <h3>After the download</h3>
+            <div class="steps">
+              <div class="step"><div class="num">1</div><div><p>Run the installer, then open GhostApply.</p></div></div>
+              <div class="step"><div class="num">2</div><div><p>The app shows a one-line command that installs the apply engine (one time, needs Python 3.11+). Paste it in PowerShell or Terminal, then click <b>Try again</b>.</p></div></div>
+              <div class="step"><div class="num">3</div><div><p>Activate with the <code>GA1.</code> key we emailed — it stays on your computer. Add your Dice login and resume in Profile, then start a short run.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="wrap">
+          <p class="eyebrow">Platforms</p>
+          <h2>Windows, Mac, Linux</h2>
+          <div class="platforms" style="margin-top:28px">
+            <article class="platform">
+              <strong>Windows</strong>
+              <span class="badge">Live</span>
+              <p class="muted">x64 installer. Download above.</p>
+            </article>
+            <article class="platform">
+              <strong>macOS</strong>
+              <span class="badge">Live</span>
+              <p class="muted">One .dmg for Apple Silicon and Intel. Download above.</p>
+            </article>
+            <article class="platform">
+              <strong>Linux</strong>
+              <span class="badge">Live</span>
+              <p class="muted">AppImage on the <a href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">releases page</a>.</p>
+            </article>
+            <article class="platform">
+              <strong>Chrome</strong>
+              <span class="badge">Required</span>
+              <p class="muted">Headed browser so you can finish login, OTP, and captcha yourself.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <p class="eyebrow">Requirements</p>
+          <h2>What the machine needs</h2>
+          <div class="cards" style="margin-top:28px">
+            <article class="card"><h3>OS</h3><p class="muted">Windows 10/11 x64, macOS (Apple Silicon or Intel), or Linux x64. Python 3.11+ for the one-time engine install.</p></article>
+            <article class="card"><h3>Chrome / Chromium</h3><p class="muted">Playwright installs Chromium. You still see the window and finish anything the board asks.</p></article>
+            <article class="card"><h3>A license</h3><p class="muted">Customer builds expect a GA1 key. The key stays on that computer.</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="site.js"></script>
+  </body>
+</html>

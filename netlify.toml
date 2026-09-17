@@ -1,0 +1,4 @@
+# Only needed if you deploy to Netlify instead of GitHub Pages.
+# Installers are NOT hosted on the site — download buttons point to GitHub Releases.
+[build]
+  publish = "."

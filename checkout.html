@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout — GhostApply</title>
+    <meta name="description" content="GhostApply Early Access checkout." />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <section class="section">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Checkout</p>
+            <h1>Early Access</h1>
+            <p class="lede">$99 / year · one Windows seat · Dice engine · GA1 license by email.</p>
+            <div class="panel" style="margin-top:24px">
+              <p><strong>Order</strong></p>
+              <p class="muted">GhostApply Early Access × 1</p>
+              <p class="amount" style="font-size:2.4rem">$99</p>
+              <p class="fine">Taxes calculated by your payment provider when Stripe is connected.</p>
+            </div>
+          </div>
+          <form id="checkout-form" class="panel stack">
+            <h2>Billing contact</h2>
+            <label>Full name <input name="name" required autocomplete="name" /></label>
+            <label>Email for the license key <input name="email" type="email" required autocomplete="email" /></label>
+            <label>Country
+              <select name="country">
+                <option>United States</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+                <option>India</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <p class="fine">We do not collect card numbers on this page. When payment is live, this button will send you to Stripe Checkout. No card form here on purpose.</p>
+            <button class="btn btn-primary" type="submit">Place Early Access order</button>
+            <p id="checkout-status" class="notice">After payment is wired, this becomes a real charge and an automatic key email.</p>
+            <a class="fine" href="download.html">Skip to download if you already have a key →</a>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="site.js"></script>
+  </body>
+</html>
