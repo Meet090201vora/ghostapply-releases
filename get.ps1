@@ -67,6 +67,18 @@ if (Test-Path $KeepEnv) { Copy-Item $KeepEnv (Join-Path $App "backend\.env") -Fo
 # 4. Python environment + browser
 & powershell -ExecutionPolicy Bypass -File (Join-Path $App "scripts\setup.ps1")
 
+# Customer builds always require a license (never ship with LICENSE_REQUIRED=false).
+$EnvFile = Join-Path $App "backend\.env"
+if (Test-Path $EnvFile) {
+    $envText = Get-Content $EnvFile -Raw
+    if ($envText -match '(?m)^LICENSE_REQUIRED=') {
+        $envText = [regex]::Replace($envText, '(?m)^LICENSE_REQUIRED=.*$', 'LICENSE_REQUIRED=true')
+    } else {
+        $envText = $envText.TrimEnd() + "`nLICENSE_REQUIRED=true`n"
+    }
+    Set-Content -Path $EnvFile -Value $envText -NoNewline
+}
+
 # 5. Tell the desktop app where the engine lives
 Set-Content -Path (Join-Path $Data "install-root.txt") -Value $App -NoNewline
 

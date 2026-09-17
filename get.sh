@@ -54,6 +54,16 @@ mv "$SOURCE" "$APP"
 chmod +x "$APP/scripts/setup.sh" "$APP/scripts/start.sh"
 "$APP/scripts/setup.sh"
 
+# Customer builds always require a license.
+ENV_FILE="$APP/backend/.env"
+if [ -f "$ENV_FILE" ]; then
+  if grep -q '^LICENSE_REQUIRED=' "$ENV_FILE"; then
+    sed -i.bak 's/^LICENSE_REQUIRED=.*/LICENSE_REQUIRED=true/' "$ENV_FILE" && rm -f "$ENV_FILE.bak"
+  else
+    printf '\nLICENSE_REQUIRED=true\n' >> "$ENV_FILE"
+  fi
+fi
+
 printf '%s' "$APP" > "$DATA/install-root.txt"
 
 echo
