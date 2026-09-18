@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
-  "notes": "Portable Python ships inside the app \u2014 no python.org install. Mac/Windows/Linux first-launch auto-setup.",
+  "version": "0.3.1",
+  "notes": "Fix Mac incomplete pip (uvicorn missing); retry package install; fancy first-launch loading screen.",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
 }
