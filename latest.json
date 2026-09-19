@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
-  "notes": "Fix Mac incomplete pip (uvicorn missing); retry package install; fancy first-launch loading screen.",
+  "version": "0.3.2",
+  "notes": "Fix black first-launch screen (non-blocking loader); reliable Playwright Chromium install for the apply browser.",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
 }
