@@ -86,9 +86,9 @@ async function wireDownloadLinks() {
   if (!win && !mac && !linux) return;
 
   // Safe defaults: /latest/download/<name> redirects to the file itself.
-  setDownload(win, `${DOWNLOAD_BASE}/GhostApply_0.3.1_x64-setup.exe`, "GhostApply_0.3.1_x64-setup.exe");
-  setDownload(mac, `${DOWNLOAD_BASE}/GhostApply_0.3.1_universal.dmg`, "GhostApply_0.3.1_universal.dmg");
-  setDownload(linux, `${DOWNLOAD_BASE}/GhostApply_0.3.1_amd64.AppImage`, "GhostApply_0.3.1_amd64.AppImage");
+  setDownload(win, `${DOWNLOAD_BASE}/GhostApply_0.3.2_x64-setup.exe`, "GhostApply_0.3.2_x64-setup.exe");
+  setDownload(mac, `${DOWNLOAD_BASE}/GhostApply_0.3.2_universal.dmg`, "GhostApply_0.3.2_universal.dmg");
+  setDownload(linux, `${DOWNLOAD_BASE}/GhostApply_0.3.2_amd64.AppImage`, "GhostApply_0.3.2_amd64.AppImage");
 
   try {
     const response = await fetch(RELEASES_API);
