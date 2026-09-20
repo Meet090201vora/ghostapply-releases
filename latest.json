@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
-  "notes": "Fix Chromium verify IndentationError after playwright install.",
+  "version": "0.3.4",
+  "notes": "Fix Windows first-launch: stop deleting the engine zip before extract.",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
 }
