@@ -1,5 +1,5 @@
 {
-  "version": "0.3.2",
-  "notes": "Fix black first-launch screen (non-blocking loader); reliable Playwright Chromium install for the apply browser.",
+  "version": "0.3.3",
+  "notes": "Fix Chromium verify IndentationError after playwright install.",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
 }
