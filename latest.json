@@ -1,5 +1,5 @@
 {
-  "version": "0.3.4",
-  "notes": "Fix Windows first-launch: stop deleting the engine zip before extract.",
+  "version": "0.3.5",
+  "notes": "Fix false update banner; shell-aware version check; email-bound license activate; polished update card.",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
 }
