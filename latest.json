@@ -1,37 +1,37 @@
 {
-  "version": "0.4.0",
-  "notes": "GhostApply now updates itself. Greenhouse applications, a redesigned app (Apply, Profile, Gaps, Settings, Resume), and answers you give in Gaps are reused on later runs.",
+  "version": "0.4.1",
+  "notes": "New licensing, request-access page, new installer icon",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html",
-  "pub_date": "2026-10-21T00:10:31Z",
+  "pub_date": "2026-10-21T01:18:06Z",
   "engine": {
-    "version": "0.4.0",
-    "content_hash": "41331d3c87502cfc80225181c6882e68674c4cc99672b9dbbe823b1aadf9c1bd",
-    "deps_hash": "85e6030f03c35400759cb551866223618c1da3f5937d9f7d7d730a2386c090f0",
+    "version": "0.4.1",
+    "content_hash": "875c5e4bb784527ab19f2f51cdddf1d84ff51767cb66269e6cfdbd6799934959",
+    "deps_hash": "5be789a6696ef1c956111abb8f47b50e6973750ebbff5bdf251bc39ed250ebdd",
     "zip": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/ghostapply-engine.zip",
-      "sha256": "958c987fe69448b78f25f237fadd3ce58ca4486718892e588b381a938919ac33",
-      "size": 506113
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/ghostapply-engine.zip",
+      "sha256": "eb8607ba5236106d869409dbe80422e73090dffbbcf74eb1af64b97cfd0f2c4b",
+      "size": 521779
     },
     "tar": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/ghostapply-engine.tar.gz",
-      "sha256": "cab51557af05b0016c354cb8190d00c5e6e2b2309eab078255d6118bebcd4785",
-      "size": 484317
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/ghostapply-engine.tar.gz",
+      "sha256": "1a47200a41d1a714fefc515ff9728f5d27e51de3b9ba66d0d85d82281121ca12",
+      "size": 498925
     }
   },
   "shell": {
-    "version": "0.4.0",
+    "version": "0.4.1",
     "auto": true
   },
   "downloads": {
     "windows": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/GhostApply_0.4.0_x64-setup.exe",
-      "file": "GhostApply_0.4.0_x64-setup.exe",
-      "size": 18287528
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply_0.4.1_x64-setup.exe",
+      "file": "GhostApply_0.4.1_x64-setup.exe",
+      "size": 18356877
     },
     "mac": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/GhostApply_0.4.0_universal.dmg",
-      "file": "GhostApply_0.4.0_universal.dmg",
-      "size": 41996259
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply_0.4.1_universal.dmg",
+      "file": "GhostApply_0.4.1_universal.dmg",
+      "size": 42008498
     }
   }
 }

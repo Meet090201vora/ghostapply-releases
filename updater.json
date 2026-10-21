@@ -1,11 +1,19 @@
 {
-  "version": "0.4.0",
-  "notes": "GhostApply now updates itself. Greenhouse applications, a redesigned app (Apply, Profile, Gaps, Settings, Resume), and answers you give in Gaps are reused on later runs.",
-  "pub_date": "2026-10-21T00:10:31Z",
+  "version": "0.4.1",
+  "notes": "New licensing, request-access page, new installer icon",
+  "pub_date": "2026-10-21T01:18:06Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/GhostApply_0.4.0_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTc4TWZWWjJQSnVZT25uZFRFTzY1K0V6YUVmY09yeDFmQVlZck0rMHU4MGQzSGdiR09PVHg5TWExYjFuMCs4eGdEKzVINUZzL1NFRnd2TnFoMW94S2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQxNDA4CWZpbGU6R2hvc3RBcHBseV8wLjQuMF94NjQtc2V0dXAuZXhlCk5MRk1tdXpMQmFjaE9iVHltazU1U3dZdXhjcC9aRzhjQWNDSzRxa2JMR0lRcnlwNG5uZ1BiSnBmd21FbEV0UGZGZWdDTDRrM2doZWQvL3FjbUUwK0FRPT0K"
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply_0.4.1_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTN5ZThTcU1PNG40OE1aWVh4M2h2azBSUzVYVEhBaU9HcUtOc0JKZTlOdW4rcjhvY1BIaTM5Q090SE9HbWZQMXU2ZVR0STFETktOOEVWOCtZbnhIaEFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ1NDQ2CWZpbGU6R2hvc3RBcHBseV8wLjQuMV94NjQtc2V0dXAuZXhlCitwK3I1cHZFQlFvTmJ2WE9MWlczYVNqcjQxcEZUTG8vbUgrcGdXZXJhSjJUcDJDR0huZTBTa2YrczNaQWk0SzF4aGNtK256Qit0UXIrN2NGQ0EyM0FRPT0K"
+    },
+    "darwin-aarch64": {
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTlHNFArVGtVd0JnL2NLTjBxRzl5MXNNaHlnK3lQejRJRDJucXV5TFlwNGdHNWdEUGdNMWVEU3Rla0xmSnQ2Q0hVOEUrem9nQTNjR3l4U2hjekpWUXd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ0OTc5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6ClB6dndONGkwV0RkRWRVRHNTa2JENFJjV1lNTit5WVB5WUtlY0xJaklGbGl2dGduK3N6OERRT09sdVoxM0FDc2k2aW43UUk3UFFzRkVvYzNPYTVZTUFnPT0K"
+    },
+    "darwin-x86_64": {
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTlHNFArVGtVd0JnL2NLTjBxRzl5MXNNaHlnK3lQejRJRDJucXV5TFlwNGdHNWdEUGdNMWVEU3Rla0xmSnQ2Q0hVOEUrem9nQTNjR3l4U2hjekpWUXd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ0OTc5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6ClB6dndONGkwV0RkRWRVRHNTa2JENFJjV1lNTit5WVB5WUtlY0xJaklGbGl2dGduK3N6OERRT09sdVoxM0FDc2k2aW43UUk3UFFzRkVvYzNPYTVZTUFnPT0K"
     }
   }
 }
