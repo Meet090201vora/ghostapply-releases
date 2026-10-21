@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Download — GhostApply</title>
-    <meta name="description" content="Download GhostApply for Windows. Early Access desktop app for Dice Easy Apply." />
+    <meta name="description" content="Download GhostApply for Windows, Mac or Linux. Early Access desktop app that applies on Dice, ZipRecruiter and Greenhouse, and updates itself." />
     <link rel="icon" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,22 +19,40 @@
           <div>
             <p class="eyebrow">Download</p>
             <h1>GhostApply for your <span style="color:var(--ghost)">desk</span></h1>
-            <p class="lede">Download the GhostApply app for your computer. Click once — the installer file saves to your machine.</p>
+            <p class="lede">Download the GhostApply app for your computer. Install it once — after that it keeps itself up to date.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" id="dl-windows" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest/download/GhostApply_0.3.5_x64-setup.exe" download>Download for Windows</a>
-              <a class="btn btn-primary" id="dl-mac" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest/download/GhostApply_0.3.5_universal.dmg" download>Download for Mac</a>
-              <a class="btn btn-ghost" id="dl-linux" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest/download/GhostApply_0.3.5_amd64.AppImage" download>Linux</a>
+              <a class="btn btn-primary" id="dl-windows" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Download for Windows</a>
+              <a class="btn btn-primary" id="dl-mac" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Download for Mac</a>
+              <a class="btn btn-ghost" id="dl-linux" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Linux</a>
               <a class="btn btn-ghost" href="pricing.html">Buy a license</a>
             </div>
-            <p class="fine" id="dl-version">Version 0.3.5 · Early Access</p>
+            <p class="fine" id="dl-version">Latest version · Early Access</p>
+            <div class="panel release-notes" id="dl-notes" hidden>
+              <p class="eyebrow" id="dl-notes-title">What’s new</p>
+              <p id="dl-notes-body"></p>
+            </div>
           </div>
           <div class="panel">
             <h3>After the download</h3>
             <div class="steps">
-              <div class="step"><div class="num">1</div><div><p>Run the installer (Windows) or open the .dmg and drag GhostApply to Applications (Mac).</p></div></div>
-              <div class="step"><div class="num">2</div><div><p>Open GhostApply. The first launch downloads and sets up the apply engine automatically (needs internet; may take a few minutes). Python is included in the app — you do not install it separately.</p></div></div>
-              <div class="step"><div class="num">3</div><div><p>Activate with the <code>GA1.</code> key we emailed — it stays on your computer. Add your Dice login and resume in Profile, then start a short run.</p></div></div>
+              <div class="step"><div class="num">1</div><div><p>Run the installer (Windows) or open the .dmg and drag GhostApply to Applications (Mac). Already have GhostApply? Just install over it — your profiles, answers and history are kept.</p></div></div>
+              <div class="step"><div class="num">2</div><div><p>Open GhostApply. The first launch sets up the apply engine and its browser automatically (needs internet; may take a few minutes). Python is included in the app — you do not install it separately.</p></div></div>
+              <div class="step"><div class="num">3</div><div><p>Activate with the <code>GA1.</code> key we emailed — it stays on your computer. Fill in your Profile and resume, add your board logins in Settings, then start a short run.</p></div></div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Updates</p>
+            <h2>Install once.<br />It stays current.</h2>
+          </div>
+          <div class="cards" style="grid-template-columns:1fr 1fr">
+            <article class="card"><h3>Automatic</h3><p class="muted">GhostApply checks for a new version when it opens and every 15 minutes while it runs. Nothing to click.</p></article>
+            <article class="card"><h3>Never mid-run</h3><p class="muted">It waits until no run is going and nothing is unsaved, shows “Updating to the latest version”, then reopens.</p></article>
+            <article class="card"><h3>Your data stays</h3><p class="muted">Only the files that changed are replaced. Profiles, saved answers, history and logins are never touched.</p></article>
+            <article class="card"><h3>Safe by default</h3><p class="muted">Every download is checksum-verified. If anything fails, the previous version is restored and keeps working.</p></article>
           </div>
         </div>
       </section>

@@ -65,51 +65,142 @@ function footerHTML() {
 document.getElementById("site-header").outerHTML = headerHTML();
 document.getElementById("site-footer").outerHTML = footerHTML();
 
-// Direct file downloads (Cursor-style): never send users to a GitHub page.
-// Asset URLs force a file download; no source code or release notes are shown.
-const DOWNLOAD_BASE =
-  "https://github.com/Meet090201vora/ghostapply-releases/releases/latest/download";
-const RELEASES_API =
-  "https://api.github.com/repos/Meet090201vora/ghostapply-releases/releases/latest";
+// Direct file downloads (Cursor-style). Every release publishes latest.json next to this
+// site with the exact installer URLs, so the buttons always point at the newest build.
+// Fallbacks: the GitHub API (rate-limited), then the release page (never a dead link).
+const RELEASES_REPO = "Meet090201vora/ghostapply-releases";
+const RELEASES_PAGE = `https://github.com/${RELEASES_REPO}/releases/latest`;
+const RELEASES_API = `https://api.github.com/repos/${RELEASES_REPO}/releases/latest`;
+const MANIFEST_URLS = [
+  "latest.json",
+  "https://meet090201vora.github.io/ghostapply-releases/latest.json",
+];
 
 function setDownload(el, url, filename) {
   if (!el || !url) return;
   el.href = url;
-  el.setAttribute("download", filename || "");
+  if (filename) el.setAttribute("download", filename);
+  else el.removeAttribute("download");
   el.removeAttribute("target");
 }
 
-async function wireDownloadLinks() {
-  const win = document.querySelector("#dl-windows");
-  const mac = document.querySelector("#dl-mac");
-  const linux = document.querySelector("#dl-linux");
-  if (!win && !mac && !linux) return;
+async function fetchJSON(url) {
+  const response = await fetch(url, { cache: "no-store" });
+  if (!response.ok) throw new Error(`${response.status}`);
+  return response.json();
+}
 
-  // Safe defaults: /latest/download/<name> redirects to the file itself.
-  setDownload(win, `${DOWNLOAD_BASE}/GhostApply_0.3.5_x64-setup.exe`, "GhostApply_0.3.5_x64-setup.exe");
-  setDownload(mac, `${DOWNLOAD_BASE}/GhostApply_0.3.5_universal.dmg`, "GhostApply_0.3.5_universal.dmg");
-  setDownload(linux, `${DOWNLOAD_BASE}/GhostApply_0.3.5_amd64.AppImage`, "GhostApply_0.3.5_amd64.AppImage");
+// Installer names follow Tauri's pattern, so a manifest without a "downloads" block still works.
+function installersFor(version) {
+  const base = `https://github.com/${RELEASES_REPO}/releases/download/v${version}`;
+  const files = {
+    windows: `GhostApply_${version}_x64-setup.exe`,
+    mac: `GhostApply_${version}_universal.dmg`,
+    linux: `GhostApply_${version}_amd64.AppImage`,
+  };
+  return Object.fromEntries(
+    Object.entries(files).map(([os, file]) => [os, { url: `${base}/${file}`, file }]),
+  );
+}
 
-  try {
-    const response = await fetch(RELEASES_API);
-    if (!response.ok) throw new Error(response.statusText);
-    const release = await response.json();
-    const assets = release.assets || [];
-    const pick = (test) => assets.find((a) => test(a.name.toLowerCase()));
-    // Installers only — never wire engine.zip or source archives.
-    const winAsset = pick((n) => n.endsWith("-setup.exe") || (n.endsWith(".exe") && !n.includes("engine")));
-    const macAsset = pick((n) => n.endsWith(".dmg"));
-    const linuxAsset = pick((n) => n.endsWith(".appimage"));
-    if (winAsset) setDownload(win, winAsset.browser_download_url, winAsset.name);
-    if (macAsset) setDownload(mac, macAsset.browser_download_url, macAsset.name);
-    if (linuxAsset) setDownload(linux, linuxAsset.browser_download_url, linuxAsset.name);
-    const version = (release.tag_name || "").replace(/^v/, "");
-    const fine = document.querySelector("#dl-version");
-    if (fine && version) {
-      fine.textContent = `Version ${version} · Early Access`;
+async function fromManifest() {
+  for (const url of MANIFEST_URLS) {
+    try {
+      const manifest = await fetchJSON(url);
+      const version = String(manifest.version || "").replace(/^v/, "");
+      if (!version) continue;
+      return {
+        version,
+        notes: manifest.notes || "",
+        date: manifest.pub_date || "",
+        downloads: manifest.downloads || null, // older manifests have no installer links
+      };
+    } catch {
+      // try the next source
     }
-  } catch {
-    // Defaults above already point at the installer files.
+  }
+  return null;
+}
+
+async function fromReleasesApi() {
+  const release = await fetchJSON(RELEASES_API);
+  const assets = release.assets || [];
+  const pick = (test) => {
+    const asset = assets.find((a) => test(a.name.toLowerCase()));
+    return asset ? { url: asset.browser_download_url, file: asset.name } : null;
+  };
+  return {
+    version: String(release.tag_name || "").replace(/^v/, ""),
+    notes: release.body || "",
+    date: release.published_at || "",
+    // Installers only — never the engine archives or updater bundles.
+    downloads: {
+      windows: pick((n) => n.endsWith("-setup.exe")),
+      mac: pick((n) => n.endsWith(".dmg")),
+      linux: pick((n) => n.endsWith(".appimage")),
+    },
+  };
+}
+
+function detectOS() {
+  const ua = `${navigator.userAgentData?.platform || ""} ${navigator.platform || ""} ${navigator.userAgent}`.toLowerCase();
+  if (/iphone|ipad|ipod|android/.test(ua)) return ""; // phones: no desktop build to favor
+  if (ua.includes("win")) return "windows";
+  if (ua.includes("mac")) return "mac";
+  if (ua.includes("linux") && !ua.includes("android")) return "linux";
+  return "";
+}
+
+async function wireDownloadLinks() {
+  const buttons = {
+    windows: document.querySelector("#dl-windows"),
+    mac: document.querySelector("#dl-mac"),
+    linux: document.querySelector("#dl-linux"),
+  };
+  if (!buttons.windows && !buttons.mac && !buttons.linux) return;
+
+  // Put this visitor's platform first.
+  const os = detectOS();
+  const mine = buttons[os];
+  if (mine && mine.parentElement) {
+    mine.parentElement.prepend(mine);
+    mine.classList.add("btn-primary");
+    mine.classList.remove("btn-ghost");
+    if (os === "linux") mine.textContent = "Download for Linux";
+  }
+
+  // 1) the manifest's exact links, 2) the release's real assets, 3) names built from the version.
+  let release = await fromManifest();
+  if (!release || !release.downloads) {
+    try {
+      const api = await fromReleasesApi();
+      release = { ...api, notes: (release && release.notes) || api.notes };
+    } catch {
+      if (!release) return; // buttons keep pointing at the release page
+      release.downloads = installersFor(release.version);
+    }
+  }
+  for (const [key, el] of Object.entries(buttons)) {
+    const item = release.downloads && release.downloads[key];
+    if (item && item.url) setDownload(el, item.url, item.file);
+  }
+
+  if (release.version) {
+    const fine = document.querySelector("#dl-version");
+    if (fine) {
+      let when = "";
+      const date = release.date ? new Date(release.date) : null;
+      if (date && !Number.isNaN(date.getTime())) {
+        when = ` · released ${date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}`;
+      }
+      fine.textContent = `Version ${release.version}${when} · Early Access · updates itself`;
+    }
+    const notes = document.querySelector("#dl-notes");
+    if (notes && release.notes) {
+      document.querySelector("#dl-notes-title").textContent = `What’s new in ${release.version}`;
+      document.querySelector("#dl-notes-body").textContent = release.notes;
+      notes.hidden = false;
+    }
   }
 }
 wireDownloadLinks();
@@ -125,7 +216,7 @@ if (form) {
     const box = document.querySelector("#checkout-status");
     box.className = "notice ok";
     box.textContent =
-      "Got it. Card checkout is not live on this preview yet — we will email this address a GA1 license key after payment is connected. Keep this tab: you can still download the Windows app now.";
+      "Got it. Card checkout is not live on this preview yet — we will email this address a GA1 license key after payment is connected. Keep this tab: you can still download the app now.";
   });
 }
 

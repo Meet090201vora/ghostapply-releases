@@ -332,3 +332,7 @@ input:focus, textarea:focus { outline: 1px solid var(--ghost-dim); border-color:
   .cta-band { padding: 28px; }
   .hero { padding-top: 40px; }
 }
+
+.release-notes { margin-top: 20px; padding: 18px 20px; }
+.release-notes .eyebrow { margin-bottom: 6px; }
+.release-notes p:last-child { margin: 0; white-space: pre-line; }
