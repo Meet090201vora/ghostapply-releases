@@ -27,7 +27,7 @@ function headerHTML() {
         <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
         <nav class="nav">
           ${links}
-          <a class="btn btn-primary" href="download.html">Get the app</a>
+          <a class="btn btn-primary" href="apply.html">Request access</a>
         </nav>
       </div>
     </header>`;
@@ -45,6 +45,7 @@ function footerHTML() {
           <strong>Product</strong>
           <a href="product.html">How it works</a><br />
           <a href="download.html">Download</a><br />
+          <a href="apply.html">Request access</a><br />
           <a href="pricing.html">Pricing &amp; billing</a>
         </div>
         <div>
@@ -209,6 +210,24 @@ const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 toggle?.addEventListener("click", () => nav.classList.toggle("open"));
 
+const PLANS = {
+  monthly: { line: "$12 / month", name: "GhostApply Pro — monthly", price: "$12" },
+  pass: { line: "$29 / 3 months", name: "GhostApply Job Search Pass — 3 months", price: "$29" },
+};
+const planSelect = document.querySelector("#plan-select");
+function showPlan(key) {
+  const plan = PLANS[key] || PLANS.monthly;
+  document.querySelector("#plan-line").textContent = plan.line;
+  document.querySelector("#plan-name").textContent = plan.name;
+  document.querySelector("#plan-price").textContent = plan.price;
+}
+if (planSelect) {
+  const wanted = new URLSearchParams(location.search).get("plan");
+  if (wanted && PLANS[wanted]) planSelect.value = wanted;
+  showPlan(planSelect.value);
+  planSelect.addEventListener("change", () => showPlan(planSelect.value));
+}
+
 const form = document.querySelector("#checkout-form");
 if (form) {
   form.addEventListener("submit", (event) => {
@@ -217,6 +236,93 @@ if (form) {
     box.className = "notice ok";
     box.textContent =
       "Got it. Card checkout is not live on this preview yet — we will email this address a GA1 license key after payment is connected. Keep this tab: you can still download the app now.";
+  });
+}
+
+// Request access form -> Google Apps Script (saves a row in your Sheet, emails the applicant).
+const accessForm = document.querySelector("#access-form");
+if (accessForm) {
+  const status = document.querySelector("#access-status");
+  const button = accessForm.querySelector(".access-submit");
+  const buttonLabel = button.innerHTML;
+
+  const say = (text, kind) => {
+    status.hidden = !text;
+    status.textContent = text || "";
+    status.className = `notice${kind ? ` ${kind}` : ""}`;
+  };
+  const mark = (el, bad) => el && el.classList.toggle("invalid", bad);
+
+  function validate() {
+    let first = null;
+    const flag = (el, bad) => { mark(el, bad); if (bad && !first) first = el; };
+    for (const name of ["name", "email", "roles"]) {
+      const input = accessForm.elements[name];
+      flag(input, !input.value.trim() || (name === "email" && !input.checkValidity()));
+    }
+    const linkedin = accessForm.elements.linkedin;
+    flag(linkedin, linkedin.value.trim() !== "" && !linkedin.checkValidity());
+    const os = accessForm.querySelector("#os-group");
+    flag(os, !accessForm.querySelector('input[name="os"]:checked'));
+    const consent = accessForm.querySelector(".consent");
+    flag(consent, !accessForm.elements.consent.checked);
+    return first;
+  }
+
+  accessForm.addEventListener("input", (event) => {
+    const el = event.target.closest(".invalid") || event.target;
+    if (el.classList.contains("invalid")) mark(el, false);
+    const group = event.target.closest(".chip-group, .consent");
+    if (group) mark(group, false);
+  });
+
+  accessForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    say("");
+    const bad = validate();
+    if (bad) {
+      say("Please fill in the highlighted fields.", "err");
+      (bad.querySelector ? bad.querySelector("input") || bad : bad).focus?.();
+      return;
+    }
+    const endpoint = accessForm.dataset.endpoint || "";
+    if (!endpoint.startsWith("https://")) {
+      say("Requests aren't connected yet. Email us from the Contact page and we'll add you by hand.", "err");
+      return;
+    }
+
+    const form = new FormData(accessForm);
+    const payload = Object.fromEntries(
+      [...new Set(form.keys())].map((key) => {
+        const values = form.getAll(key).map((v) => String(v).trim());
+        return [key, key === "boards" ? values : values[0] || ""];
+      }),
+    );
+    payload.page = location.href;
+    payload.userAgent = navigator.userAgent;
+
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner"></span>Sending…';
+    try {
+      // text/plain keeps this a "simple" request, so the browser skips the CORS preflight Apps Script can't answer.
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || "Something went wrong.");
+      document.querySelector("#access-name").textContent = payload.name.split(/\s+/)[0] || "friend";
+      document.querySelector("#access-email").textContent = payload.email;
+      accessForm.hidden = true;
+      const done = document.querySelector("#access-done");
+      done.hidden = false;
+      done.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch (error) {
+      say(`${error.message} Please try again in a minute.`, "err");
+      button.disabled = false;
+      button.innerHTML = buttonLabel;
+    }
   });
 }
 

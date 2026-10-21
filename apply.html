@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Request access — GhostApply</title>
+    <meta name="description" content="Request early access to GhostApply, the desktop app that applies to jobs on Dice, ZipRecruiter and Greenhouse from your own computer." />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <section class="hero access-hero">
+        <div class="wrap access-grid">
+          <div class="access-pitch">
+            <p class="eyebrow">Early Access</p>
+            <h1>Get on the <span>list</span>.</h1>
+            <p class="lede">GhostApply is opening to a small group at a time, so every new user gets a working setup and a real person to answer questions. Tell us a little about your search and we’ll be in touch.</p>
+
+            <div class="steps access-steps">
+              <div class="step"><div class="num">1</div><div><h3>Request access</h3><p class="muted">Two minutes. No card, no password.</p></div></div>
+              <div class="step"><div class="num">2</div><div><h3>Check your inbox</h3><p class="muted">You’ll get a confirmation right away, then your invite and license key when your spot opens.</p></div></div>
+              <div class="step"><div class="num">3</div><div><h3>Apply tonight</h3><p class="muted">Install on Windows, Mac or Linux, add your profile, and start a short run on Dice, ZipRecruiter or Greenhouse.</p></div></div>
+            </div>
+
+            <div class="access-facts">
+              <div><strong>3</strong><span>live job boards</span></div>
+              <div><strong>$12</strong><span>a month after Early Access</span></div>
+              <div><strong>0</strong><span>logins stored in our cloud</span></div>
+            </div>
+          </div>
+
+          <div class="panel access-panel">
+            <form id="access-form" class="stack" novalidate data-endpoint="https://script.google.com/macros/s/AKfycbyW0Az2Zlh9AB5w3MKQePC7zmuMNVbWT3sOa79FWtObrYG9NyPCp1WfCEVE6YkqvqPiMA/exec">
+              <div class="access-panel-head">
+                <h2>Request access</h2>
+                <p class="fine">Fields marked * are required.</p>
+              </div>
+
+              <div class="field-row">
+                <label>Full name *
+                  <input name="name" required autocomplete="name" maxlength="120" />
+                </label>
+                <label>Email *
+                  <input name="email" type="email" required autocomplete="email" maxlength="200" />
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>Roles you’re applying for *
+                  <input name="roles" required maxlength="200" placeholder="e.g. Data Engineer, Backend Developer" />
+                </label>
+                <label>Where you’re based
+                  <input name="location" maxlength="120" autocomplete="address-level1" placeholder="City, state or country" />
+                </label>
+              </div>
+
+              <fieldset class="chip-group" id="os-group">
+                <legend>Your computer *</legend>
+                <label class="chip"><input type="radio" name="os" value="Windows" required /><span>Windows</span></label>
+                <label class="chip"><input type="radio" name="os" value="Mac" /><span>Mac</span></label>
+                <label class="chip"><input type="radio" name="os" value="Linux" /><span>Linux</span></label>
+              </fieldset>
+
+              <fieldset class="chip-group">
+                <legend>Boards you want to apply on</legend>
+                <label class="chip"><input type="checkbox" name="boards" value="Dice" /><span>Dice</span></label>
+                <label class="chip"><input type="checkbox" name="boards" value="ZipRecruiter" /><span>ZipRecruiter</span></label>
+                <label class="chip"><input type="checkbox" name="boards" value="Greenhouse" /><span>Greenhouse</span></label>
+                <label class="chip"><input type="checkbox" name="boards" value="LinkedIn" /><span>LinkedIn <em>soon</em></span></label>
+                <label class="chip"><input type="checkbox" name="boards" value="Talent.com" /><span>Talent.com <em>soon</em></span></label>
+              </fieldset>
+
+              <div class="field-row">
+                <label>Where you are in your search
+                  <select name="stage">
+                    <option value="">Choose one</option>
+                    <option>Actively applying now</option>
+                    <option>Starting in the next month</option>
+                    <option>Employed, quietly looking</option>
+                    <option>Just exploring</option>
+                  </select>
+                </label>
+                <label>How did you hear about us?
+                  <select name="source">
+                    <option value="">Choose one</option>
+                    <option>LinkedIn</option>
+                    <option>Reddit</option>
+                    <option>A friend or colleague</option>
+                    <option>Search</option>
+                    <option>YouTube or TikTok</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+              </div>
+
+              <label><span>LinkedIn profile <span class="optional">optional</span></span>
+                <input name="linkedin" type="url" maxlength="200" placeholder="https://linkedin.com/in/…" />
+              </label>
+
+              <label><span>Anything we should know? <span class="optional">optional</span></span>
+                <textarea name="notes" rows="3" maxlength="1000" placeholder="What’s slowing your search down, boards you need, questions…"></textarea>
+              </label>
+
+              <!-- Spam trap: people never see or fill this. -->
+              <label class="trap" aria-hidden="true">Company website
+                <input name="company_website" tabindex="-1" autocomplete="off" />
+              </label>
+
+              <label class="consent">
+                <input type="checkbox" name="consent" value="yes" required />
+                <span>Email me about my access request and GhostApply updates. Unsubscribe any time.</span>
+              </label>
+
+              <button class="btn btn-primary access-submit" type="submit">
+                <span class="label">Request access</span>
+              </button>
+              <p id="access-status" class="notice" role="status" aria-live="polite" hidden></p>
+              <p class="fine">We use your details only to manage your access. See our <a href="privacy.html">privacy policy</a>.</p>
+            </form>
+
+            <div id="access-done" class="access-done" hidden>
+              <img src="assets/logo.png" alt="" width="88" height="88" />
+              <p class="eyebrow">You’re on the list</p>
+              <h2>Thanks, <span id="access-name">friend</span>.</h2>
+              <p class="lede">We’ve sent a confirmation to <strong id="access-email"></strong>. When your spot opens, your invite and license key will land in the same inbox.</p>
+              <p class="fine">Don’t see it in a few minutes? Check spam or Promotions and mark it “Not spam” so your invite gets through.</p>
+              <div class="hero-actions">
+                <a class="btn btn-ghost" href="product.html">See how it works</a>
+                <a class="btn btn-ghost" href="pricing.html">Pricing</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="site.js"></script>
+  </body>
+</html>

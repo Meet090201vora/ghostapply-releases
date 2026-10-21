@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Checkout — GhostApply</title>
-    <meta name="description" content="GhostApply Early Access checkout." />
+    <meta name="description" content="GhostApply checkout: Pro $12/month or Job Search Pass $29 for 3 months." />
     <link rel="icon" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,12 +18,12 @@
         <div class="wrap split">
           <div>
             <p class="eyebrow">Checkout</p>
-            <h1>Early Access</h1>
-            <p class="lede">$99 / year · one computer (Windows, Mac or Linux) · Dice, ZipRecruiter and Greenhouse · GA1 license by email.</p>
+            <h1>GhostApply Pro</h1>
+            <p class="lede"><span id="plan-line">$12 / month</span> · unlimited applications · one computer (Windows, Mac or Linux) · cancel any time · license by email.</p>
             <div class="panel" style="margin-top:24px">
               <p><strong>Order</strong></p>
-              <p class="muted">GhostApply Early Access × 1</p>
-              <p class="amount" style="font-size:2.4rem">$99</p>
+              <p class="muted" id="plan-name">GhostApply Pro — monthly</p>
+              <p class="amount" style="font-size:2.4rem" id="plan-price">$12</p>
               <p class="fine">Taxes calculated by your payment provider when Stripe is connected.</p>
             </div>
           </div>
@@ -31,6 +31,12 @@
             <h2>Billing contact</h2>
             <label>Full name <input name="name" required autocomplete="name" /></label>
             <label>Email for the license key <input name="email" type="email" required autocomplete="email" /></label>
+            <label>Plan
+              <select name="plan" id="plan-select">
+                <option value="monthly">Pro — $12 / month</option>
+                <option value="pass">Job Search Pass — $29 / 3 months</option>
+              </select>
+            </label>
             <label>Country
               <select name="country">
                 <option>United States</option>
@@ -41,7 +47,7 @@
               </select>
             </label>
             <p class="fine">We do not collect card numbers on this page. When payment is live, this button will send you to Stripe Checkout. No card form here on purpose.</p>
-            <button class="btn btn-primary" type="submit">Place Early Access order</button>
+            <button class="btn btn-primary" type="submit">Continue to payment</button>
             <p id="checkout-status" class="notice">After payment is wired, this becomes a real charge and an automatic key email.</p>
             <a class="fine" href="download.html">Skip to download if you already have a key →</a>
           </form>
