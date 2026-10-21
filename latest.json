@@ -1,5 +1,37 @@
 {
-  "version": "0.3.5",
-  "notes": "Fix false update banner; shell-aware version check; email-bound license activate; polished update card.",
-  "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html"
+  "version": "0.4.0",
+  "notes": "GhostApply now updates itself. Greenhouse applications, a redesigned app (Apply, Profile, Gaps, Settings, Resume), and answers you give in Gaps are reused on later runs.",
+  "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html",
+  "pub_date": "2026-10-21T00:10:31Z",
+  "engine": {
+    "version": "0.4.0",
+    "content_hash": "41331d3c87502cfc80225181c6882e68674c4cc99672b9dbbe823b1aadf9c1bd",
+    "deps_hash": "85e6030f03c35400759cb551866223618c1da3f5937d9f7d7d730a2386c090f0",
+    "zip": {
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/ghostapply-engine.zip",
+      "sha256": "958c987fe69448b78f25f237fadd3ce58ca4486718892e588b381a938919ac33",
+      "size": 506113
+    },
+    "tar": {
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/ghostapply-engine.tar.gz",
+      "sha256": "cab51557af05b0016c354cb8190d00c5e6e2b2309eab078255d6118bebcd4785",
+      "size": 484317
+    }
+  },
+  "shell": {
+    "version": "0.4.0",
+    "auto": true
+  },
+  "downloads": {
+    "windows": {
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/GhostApply_0.4.0_x64-setup.exe",
+      "file": "GhostApply_0.4.0_x64-setup.exe",
+      "size": 18287528
+    },
+    "mac": {
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/GhostApply_0.4.0_universal.dmg",
+      "file": "GhostApply_0.4.0_universal.dmg",
+      "size": 41996259
+    }
+  }
 }

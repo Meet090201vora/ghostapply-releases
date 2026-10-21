@@ -1,0 +1,11 @@
+{
+  "version": "0.4.0",
+  "notes": "GhostApply now updates itself. Greenhouse applications, a redesigned app (Apply, Profile, Gaps, Settings, Resume), and answers you give in Gaps are reused on later runs.",
+  "pub_date": "2026-10-21T00:10:31Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.0/GhostApply_0.4.0_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTc4TWZWWjJQSnVZT25uZFRFTzY1K0V6YUVmY09yeDFmQVlZck0rMHU4MGQzSGdiR09PVHg5TWExYjFuMCs4eGdEKzVINUZzL1NFRnd2TnFoMW94S2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQxNDA4CWZpbGU6R2hvc3RBcHBseV8wLjQuMF94NjQtc2V0dXAuZXhlCk5MRk1tdXpMQmFjaE9iVHltazU1U3dZdXhjcC9aRzhjQWNDSzRxa2JMR0lRcnlwNG5uZ1BiSnBmd21FbEV0UGZGZWdDTDRrM2doZWQvL3FjbUUwK0FRPT0K"
+    }
+  }
+}
