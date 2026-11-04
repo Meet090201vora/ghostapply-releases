@@ -1,19 +1,19 @@
 {
-  "version": "0.4.1",
-  "notes": "New licensing, request-access page, new installer icon",
-  "pub_date": "2026-10-21T01:18:06Z",
+  "version": "0.4.2",
+  "notes": "LinkedIn Easy Apply (up to 40 a day), My job links for every board, regions (US / India / Global) with per-region profile settings, create a profile from your resume, Stop button, Foundit questionnaire support, max 5 Chrome tabs",
+  "pub_date": "2026-11-04T04:23:43Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply_0.4.1_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTN5ZThTcU1PNG40OE1aWVh4M2h2azBSUzVYVEhBaU9HcUtOc0JKZTlOdW4rcjhvY1BIaTM5Q090SE9HbWZQMXU2ZVR0STFETktOOEVWOCtZbnhIaEFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ1NDQ2CWZpbGU6R2hvc3RBcHBseV8wLjQuMV94NjQtc2V0dXAuZXhlCitwK3I1cHZFQlFvTmJ2WE9MWlczYVNqcjQxcEZUTG8vbUgrcGdXZXJhSjJUcDJDR0huZTBTa2YrczNaQWk0SzF4aGNtK256Qit0UXIrN2NGQ0EyM0FRPT0K"
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply_0.4.2_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYXcwMFc0dXBCSlpyR3BJTDh5TCtpODNXT2poUTd3VWJzVGZjK0I0aC82bkZYVWVjQytsaVRNZ2Z1cUozaW5YVVkxU1krU010WUp4RTZTb2dheFpJdVEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzY2MjAxCWZpbGU6R2hvc3RBcHBseV8wLjQuMl94NjQtc2V0dXAuZXhlCnZUcXdqVlhHTHo1Q29YL1FXZVlYV0lsdzVkU3RJbnpTd2owU0pGZFdoc2JFM0JLSU5zeDNzZmpHaUM4VDBWTTZWZG1keVNEUDV5SDFHbEtRWi9MUkFRPT0K"
     },
     "darwin-aarch64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTlHNFArVGtVd0JnL2NLTjBxRzl5MXNNaHlnK3lQejRJRDJucXV5TFlwNGdHNWdEUGdNMWVEU3Rla0xmSnQ2Q0hVOEUrem9nQTNjR3l4U2hjekpWUXd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ0OTc5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6ClB6dndONGkwV0RkRWRVRHNTa2JENFJjV1lNTit5WVB5WUtlY0xJaklGbGl2dGduK3N6OERRT09sdVoxM0FDc2k2aW43UUk3UFFzRkVvYzNPYTVZTUFnPT0K"
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTcvU3BmdC9ZM1RhS1RxNXpIUVR3bnBSWVQ0TEpSN3dRL1EvaUM1TWg3RnFBNFBQU2pNYUxxa291MGFxbFMzRDFlSXh3ZUhoaXFTVk1ENVIrd0F3eUFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzY1ODE5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6CjhtRWpiamNNb2grN0dFQ3NDVmFDK29KSWZnSktmQmpNTjF5ck5lVUFET3JIOUk0aFlKbVVrcENNcXRiVC9iRXlsSzBHNWNqS3BrRWZLdzYwNnBpU0JBPT0K"
     },
     "darwin-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.1/GhostApply.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTlHNFArVGtVd0JnL2NLTjBxRzl5MXNNaHlnK3lQejRJRDJucXV5TFlwNGdHNWdEUGdNMWVEU3Rla0xmSnQ2Q0hVOEUrem9nQTNjR3l4U2hjekpWUXd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ0OTc5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6ClB6dndONGkwV0RkRWRVRHNTa2JENFJjV1lNTit5WVB5WUtlY0xJaklGbGl2dGduK3N6OERRT09sdVoxM0FDc2k2aW43UUk3UFFzRkVvYzNPYTVZTUFnPT0K"
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTcvU3BmdC9ZM1RhS1RxNXpIUVR3bnBSWVQ0TEpSN3dRL1EvaUM1TWg3RnFBNFBQU2pNYUxxa291MGFxbFMzRDFlSXh3ZUhoaXFTVk1ENVIrd0F3eUFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzY1ODE5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6CjhtRWpiamNNb2grN0dFQ3NDVmFDK29KSWZnSktmQmpNTjF5ck5lVUFET3JIOUk0aFlKbVVrcENNcXRiVC9iRXlsSzBHNWNqS3BrRWZLdzYwNnBpU0JBPT0K"
     }
   }
 }
