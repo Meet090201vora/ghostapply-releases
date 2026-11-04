@@ -319,7 +319,10 @@ if (accessForm) {
       done.hidden = false;
       done.scrollIntoView({ behavior: "smooth", block: "center" });
     } catch (error) {
-      say(`${error.message} Please try again in a minute.`, "err");
+      const offline = error instanceof TypeError; // network/CORS: the request never got an answer
+      say(offline
+        ? "We couldn't reach our sign-up service. Check your connection and try again — or email us from the Contact page."
+        : `${error.message} Please try again in a minute.`, "err");
       button.disabled = false;
       button.innerHTML = buttonLabel;
     }
