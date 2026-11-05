@@ -1,19 +1,19 @@
 {
-  "version": "0.4.2",
-  "notes": "LinkedIn Easy Apply (up to 40 a day), My job links for every board, regions (US / India / Global) with per-region profile settings, create a profile from your resume, Stop button, Foundit questionnaire support, max 5 Chrome tabs",
-  "pub_date": "2026-11-04T04:23:43Z",
+  "version": "0.4.3",
+  "notes": "Fixed Chrome not starting on some computers; fixed LinkedIn stopping after the first page on Windows; clearer messages when the browser is closed",
+  "pub_date": "2026-11-05T04:09:49Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply_0.4.2_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYXcwMFc0dXBCSlpyR3BJTDh5TCtpODNXT2poUTd3VWJzVGZjK0I0aC82bkZYVWVjQytsaVRNZ2Z1cUozaW5YVVkxU1krU010WUp4RTZTb2dheFpJdVEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzY2MjAxCWZpbGU6R2hvc3RBcHBseV8wLjQuMl94NjQtc2V0dXAuZXhlCnZUcXdqVlhHTHo1Q29YL1FXZVlYV0lsdzVkU3RJbnpTd2owU0pGZFdoc2JFM0JLSU5zeDNzZmpHaUM4VDBWTTZWZG1keVNEUDV5SDFHbEtRWi9MUkFRPT0K"
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/GhostApply_0.4.3_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTU4MU5ja0hKZmc0eWI5Sk9iSnhUOUFRRTlFejFPTGc5dkJaamxMWmtjVlJROW1QUDR2VjdZeDZqZGQ1K3dNWnN5bGJ2eXVmZ2Y0RWxzODdKaXZWOVFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzODUxNzE4CWZpbGU6R2hvc3RBcHBseV8wLjQuM194NjQtc2V0dXAuZXhlClVMM2RmU05wbXpJcllzblpMaXM1OHV1Q1JOTWNrcW1saTU0aVZjZW9ycVFaZGxTa0xOano1S3psL1V0QVpyNHFTbXNQU24xZGU1dEdKTi90VWRaaER3PT0K"
     },
     "darwin-aarch64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTcvU3BmdC9ZM1RhS1RxNXpIUVR3bnBSWVQ0TEpSN3dRL1EvaUM1TWg3RnFBNFBQU2pNYUxxa291MGFxbFMzRDFlSXh3ZUhoaXFTVk1ENVIrd0F3eUFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzY1ODE5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6CjhtRWpiamNNb2grN0dFQ3NDVmFDK29KSWZnSktmQmpNTjF5ck5lVUFET3JIOUk0aFlKbVVrcENNcXRiVC9iRXlsSzBHNWNqS3BrRWZLdzYwNnBpU0JBPT0K"
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/GhostApply.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYS9ZcGNOWS8zZEFqd0J0VURldmlqV3ZDY1d0d1VrcDhJM1VlenN6K0xWUkpyKzlvS2JLRHJVT0RlQ1JRMGp6cVZlWERic0E1OGRFVjdaWDRmN011dVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzODUxNDE4CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6CjNySDluejdMK2dLTFZKZk5RWXZOVVFwWWxGaXRGQWthMnhiWFBKNGdkRktsa3krUTdicUE2TWFvTlhORElKU0NzR3BCV2hJRWpFSmJKZTFVZDBWWURBPT0K"
     },
     "darwin-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTcvU3BmdC9ZM1RhS1RxNXpIUVR3bnBSWVQ0TEpSN3dRL1EvaUM1TWg3RnFBNFBQU2pNYUxxa291MGFxbFMzRDFlSXh3ZUhoaXFTVk1ENVIrd0F3eUFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzY1ODE5CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6CjhtRWpiamNNb2grN0dFQ3NDVmFDK29KSWZnSktmQmpNTjF5ck5lVUFET3JIOUk0aFlKbVVrcENNcXRiVC9iRXlsSzBHNWNqS3BrRWZLdzYwNnBpU0JBPT0K"
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/GhostApply.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYS9ZcGNOWS8zZEFqd0J0VURldmlqV3ZDY1d0d1VrcDhJM1VlenN6K0xWUkpyKzlvS2JLRHJVT0RlQ1JRMGp6cVZlWERic0E1OGRFVjdaWDRmN011dVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzODUxNDE4CWZpbGU6R2hvc3RBcHBseS5hcHAudGFyLmd6CjNySDluejdMK2dLTFZKZk5RWXZOVVFwWWxGaXRGQWthMnhiWFBKNGdkRktsa3krUTdicUE2TWFvTlhORElKU0NzR3BCV2hJRWpFSmJKZTFVZDBWWURBPT0K"
     }
   }
 }

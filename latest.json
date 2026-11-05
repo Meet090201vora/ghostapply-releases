@@ -1,37 +1,37 @@
 {
-  "version": "0.4.2",
-  "notes": "LinkedIn Easy Apply (up to 40 a day), My job links for every board, regions (US / India / Global) with per-region profile settings, create a profile from your resume, Stop button, Foundit questionnaire support, max 5 Chrome tabs",
+  "version": "0.4.3",
+  "notes": "Fixed Chrome not starting on some computers; fixed LinkedIn stopping after the first page on Windows; clearer messages when the browser is closed",
   "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html",
-  "pub_date": "2026-11-04T04:23:43Z",
+  "pub_date": "2026-11-05T04:09:49Z",
   "engine": {
-    "version": "0.4.2",
-    "content_hash": "96206f0e04b9149e3985decbba04b0a1dbda8db469867c739c17a5f7487074d5",
-    "deps_hash": "5882001b373738a208c5b2d106c924c46e593eec66b3825cab41bd8f11ebb94e",
+    "version": "0.4.3",
+    "content_hash": "5f31375d002beb1b1f624df4ce49629ca391a58815b41d3714132a3fed7ff9aa",
+    "deps_hash": "c4b956ccec3d49ec706bc41962d9f932f21c0487c33e830bafb551e4bc11dcb4",
     "zip": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/ghostapply-engine.zip",
-      "sha256": "96e857771b0fb825f6f0e7ed5703dfaf655ceec17de35968be16c026378f27d1",
-      "size": 706986
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/ghostapply-engine.zip",
+      "sha256": "c94c95d59873e64e2cac1a60ba95ca36f2cc95c65030445ce0aa567f0c01d409",
+      "size": 710945
     },
     "tar": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/ghostapply-engine.tar.gz",
-      "sha256": "8360775745cebb1aecc1cfb9cb1a0f0161cfa2146741ffcd65812d1e1cf4a719",
-      "size": 678300
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/ghostapply-engine.tar.gz",
+      "sha256": "c65dc0a0b35f4aab71dc7c04155807713d6c0af56c34fb7f7f6c81f2c1d6f795",
+      "size": 681884
     }
   },
   "shell": {
-    "version": "0.4.2",
+    "version": "0.4.3",
     "auto": true
   },
   "downloads": {
     "windows": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply_0.4.2_x64-setup.exe",
-      "file": "GhostApply_0.4.2_x64-setup.exe",
-      "size": 18544566
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/GhostApply_0.4.3_x64-setup.exe",
+      "file": "GhostApply_0.4.3_x64-setup.exe",
+      "size": 18550587
     },
     "mac": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.2/GhostApply_0.4.2_universal.dmg",
-      "file": "GhostApply_0.4.2_universal.dmg",
-      "size": 42212558
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/GhostApply_0.4.3_universal.dmg",
+      "file": "GhostApply_0.4.3_universal.dmg",
+      "size": 42217024
     }
   }
 }
