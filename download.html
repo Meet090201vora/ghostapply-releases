@@ -1,102 +1,167 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Download — GhostApply</title>
-    <meta name="description" content="Download GhostApply for Windows, Mac or Linux. Early Access desktop app that applies on Dice, ZipRecruiter and Greenhouse, and updates itself." />
-    <link rel="icon" href="assets/logo.png" />
+    <title>Download Moonshift for Windows, Mac and Linux</title>
+    <meta name="description" content="Download the Moonshift desktop app for Windows, Mac or Linux. Install it once and it keeps itself up to date." />
+    <link rel="canonical" href="https://getmoonshift.com/download" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Moonshift" />
+    <meta property="og:title" content="Download Moonshift for Windows, Mac and Linux" />
+    <meta property="og:description" content="Download the Moonshift desktop app for Windows, Mac or Linux. Install it once and it keeps itself up to date." />
+    <meta property="og:url" content="https://getmoonshift.com/download" />
+    <meta property="og:image" content="https://getmoonshift.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Moonshift logo: a witch with a suitcase flying across a full moon" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Moonshift", "url": "https://getmoonshift.com/", "logo": "https://getmoonshift.com/assets/icon-512.png", "email": "support@getmoonshift.com"}</script>
   </head>
   <body>
-    <div id="site-header"></div>
-    <main>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/" aria-label="Moonshift home"><img src="/assets/mark.svg" alt="" width="36" height="36" />Moonshift</a>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="/product">How it works</a><a href="/pricing">Pricing</a><a href="/download" aria-current="page">Download</a><a href="/about">About</a><a href="/contact">Contact</a>
+          <a class="btn btn-primary btn-sm" href="/apply">Get early access</a>
+        </nav>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </header>
+    <main id="main">
       <section class="hero">
         <div class="wrap split">
           <div>
             <p class="eyebrow">Download</p>
-            <h1>GhostApply for your <span style="color:var(--ghost)">desk</span></h1>
-            <p class="lede">Download the GhostApply app for your computer. Install it once — after that it keeps itself up to date.</p>
-            <div class="hero-actions">
+            <h1>Download Moonshift</h1>
+            <p class="lede">Install it once. After that, Moonshift keeps itself up to date.</p>
+            <div class="os-buttons">
               <a class="btn btn-primary" id="dl-windows" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Download for Windows</a>
-              <a class="btn btn-primary" id="dl-mac" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Download for Mac</a>
-              <a class="btn btn-ghost" id="dl-linux" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Linux</a>
-              <a class="btn btn-ghost" href="pricing.html">Buy a license</a>
+              <a class="btn btn-ghost" id="dl-mac" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Download for Mac</a>
+              <a class="btn btn-ghost" id="dl-linux" href="https://github.com/Meet090201vora/ghostapply-releases/releases/latest">Download for Linux</a>
             </div>
-            <p class="fine" id="dl-version">Latest version · Early Access</p>
+            <p class="fine" id="dl-version" style="margin-top:16px">Latest version. Updates itself after you install it.</p>
+            <p class="notice" id="dl-phone" hidden>Moonshift is a desktop app. Open this page on your computer to download it.</p>
+            <p class="fine">You need a license key to use Moonshift. <a href="/apply">Get early access</a> if you do not have one yet.</p>
             <div class="panel release-notes" id="dl-notes" hidden>
-              <p class="eyebrow" id="dl-notes-title">What’s new</p>
-              <p id="dl-notes-body"></p>
+              <p class="eyebrow" id="dl-notes-title">What is new</p>
+              <p id="dl-notes-body" class="muted" style="margin:0"></p>
             </div>
           </div>
           <div class="panel">
-            <h3>After the download</h3>
-            <div class="steps">
-              <div class="step"><div class="num">1</div><div><p>Run the installer (Windows) or open the .dmg and drag GhostApply to Applications (Mac). Already have GhostApply? Just install over it — your profiles, answers and history are kept.</p></div></div>
-              <div class="step"><div class="num">2</div><div><p>Open GhostApply. The first launch sets up the apply engine and its browser automatically (needs internet; may take a few minutes). Python is included in the app — you do not install it separately.</p></div></div>
-              <div class="step"><div class="num">3</div><div><p>Activate with the <code>GA1.</code> key we emailed — it stays on your computer. Fill in your Profile and resume, add your board logins in Settings, then start a short run.</p></div></div>
-            </div>
+            <h2 style="font-size:1.4rem">After you download</h2>
+            <ol class="steps">
+              <li><div><h3>Install</h3><p>Windows: run the installer. Mac: open the .dmg file and drag the app into Applications. Already installed? Install over it. Your profile and history are kept.</p></div></li>
+              <li><div><h3>Open and activate</h3><p>The first launch sets a few things up and can take a few minutes. Then enter the license key from your email.</p></div></li>
+              <li><div><h3>Set up and start</h3><p>Fill in your profile, add your resume, and start a short first run to see it work.</p></div></li>
+            </ol>
           </div>
         </div>
       </section>
+
+      <section class="section alt">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Installing</p>
+            <h2>If your computer shows a warning</h2>
+            <p class="muted">Moonshift is new, so Windows and macOS may ask you to confirm the first time you open it.</p>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>Windows: &#8220;Windows protected your PC&#8221;</summary>
+              <p>Click <strong>More info</strong>, then <strong>Run anyway</strong>. You only need to do this once.</p>
+            </details>
+            <details>
+              <summary>Mac: &#8220;can&#8217;t be opened&#8221; or &#8220;cannot verify the developer&#8221;</summary>
+              <p>Open <strong>System Settings</strong>, go to <strong>Privacy &amp; Security</strong>, scroll down and click <strong>Open Anyway</strong> next to the message about the app. Then open it again.</p>
+            </details>
+            <details>
+              <summary>Linux: the AppImage will not start</summary>
+              <p>Right-click the file, open Properties and allow it to run as a program. Or run <code>chmod +x</code> on the file in a terminal, then open it.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Requirements</p>
+            <h2>What you need</h2>
+          </div>
+          <div class="grid-3">
+            <article class="card"><h3>A computer</h3><p class="muted">Windows 10 or 11 (64-bit), macOS on Apple silicon or Intel, or 64-bit Linux.</p></article>
+            <article class="card"><h3>Google Chrome</h3><p class="muted">Moonshift applies in Chrome. Install it from google.com/chrome if you do not have it.</p></article>
+            <article class="card"><h3>An internet connection</h3><p class="muted">Needed during runs, and on first launch while Moonshift sets itself up.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
         <div class="wrap split">
           <div>
             <p class="eyebrow">Updates</p>
-            <h2>Install once.<br />It stays current.</h2>
+            <h2>Always up to date, never in your way</h2>
           </div>
-          <div class="cards" style="grid-template-columns:1fr 1fr">
-            <article class="card"><h3>Automatic</h3><p class="muted">GhostApply checks for a new version when it opens and every 15 minutes while it runs. Nothing to click.</p></article>
-            <article class="card"><h3>Never mid-run</h3><p class="muted">It waits until no run is going and nothing is unsaved, shows “Updating to the latest version”, then reopens.</p></article>
-            <article class="card"><h3>Your data stays</h3><p class="muted">Only the files that changed are replaced. Profiles, saved answers, history and logins are never touched.</p></article>
-            <article class="card"><h3>Safe by default</h3><p class="muted">Every download is checksum-verified. If anything fails, the previous version is restored and keeps working.</p></article>
-          </div>
-        </div>
-      </section>
-      <section class="section alt">
-        <div class="wrap">
-          <p class="eyebrow">Platforms</p>
-          <h2>Windows, Mac, Linux</h2>
-          <div class="platforms" style="margin-top:28px">
-            <article class="platform">
-              <strong>Windows</strong>
-              <span class="badge">Live</span>
-              <p class="muted">x64 installer. Download above.</p>
-            </article>
-            <article class="platform">
-              <strong>macOS</strong>
-              <span class="badge">Live</span>
-              <p class="muted">One .dmg for Apple Silicon and Intel. Download above.</p>
-            </article>
-            <article class="platform">
-              <strong>Linux</strong>
-              <span class="badge">Live</span>
-              <p class="muted">AppImage — use the Linux button above.</p>
-            </article>
-            <article class="platform">
-              <strong>Chrome</strong>
-              <span class="badge">Required</span>
-              <p class="muted">Headed browser so you can finish login, OTP, and captcha yourself.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="wrap">
-          <p class="eyebrow">Requirements</p>
-          <h2>What the machine needs</h2>
-          <div class="cards" style="margin-top:28px">
-            <article class="card"><h3>OS</h3><p class="muted">Windows 10/11 x64, macOS (Apple Silicon or Intel), or Linux x64. Internet is needed once on first launch for the apply engine and browser.</p></article>
-            <article class="card"><h3>Chrome / Chromium</h3><p class="muted">Playwright installs Chromium. You still see the window and finish anything the board asks.</p></article>
-            <article class="card"><h3>A license</h3><p class="muted">Customer builds expect a GA1 key. The key stays on that computer.</p></article>
+          <div class="grid-2">
+            <article class="card"><h3>Automatic</h3><p class="muted">Moonshift checks for updates when it opens and while it runs. There is nothing to download again.</p></article>
+            <article class="card"><h3>Never mid-run</h3><p class="muted">It waits until no run is going and nothing is unsaved, then updates and reopens.</p></article>
+            <article class="card"><h3>Your data stays</h3><p class="muted">Updates replace the app, not your profile, saved answers, history or logins.</p></article>
+            <article class="card"><h3>Checked and safe</h3><p class="muted">Every update is verified before it is installed. If anything goes wrong, the previous version keeps working.</p></article>
           </div>
         </div>
       </section>
     </main>
-    <div id="site-footer"></div>
-    <script src="site.js"></script>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="36" height="36" />Moonshift</a>
+            <p class="muted">Job applications, sent from your own computer while you get on with your day.</p>
+          </div>
+          <div>
+            <h2>Product</h2>
+            <ul>
+              <li><a href="/product">How it works</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/download">Download</a></li>
+              <li><a href="/apply">Get early access</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="mailto:support@getmoonshift.com">support@getmoonshift.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Legal</h2>
+            <ul>
+              <li><a href="/privacy">Privacy policy</a></li>
+              <li><a href="/terms">Terms of service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; <span id="year">2026</span> Moonshift. Moonshift is an independent product and is not affiliated with or endorsed by LinkedIn, Dice, ZipRecruiter, Greenhouse, Naukri, Foundit or any other job site. Their names belong to their owners.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/site.js"></script>
   </body>
 </html>

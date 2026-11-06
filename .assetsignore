@@ -1,0 +1,6 @@
+# Files in the public repo that should not be served on the website
+wrangler.jsonc
+.assetsignore
+.git
+.github
+netlify.toml

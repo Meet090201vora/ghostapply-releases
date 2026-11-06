@@ -1,58 +1,135 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About — GhostApply</title>
-    <meta name="description" content="GhostApply is a small product building a local job-application engine. About the company and why we stay on the desktop." />
-    <link rel="icon" href="assets/logo.png" />
+    <title>About Moonshift</title>
+    <meta name="description" content="Moonshift is a small, independent software company making a desktop app that takes the repetitive work out of applying for jobs." />
+    <link rel="canonical" href="https://getmoonshift.com/about" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Moonshift" />
+    <meta property="og:title" content="About Moonshift" />
+    <meta property="og:description" content="Moonshift is a small, independent software company making a desktop app that takes the repetitive work out of applying for jobs." />
+    <meta property="og:url" content="https://getmoonshift.com/about" />
+    <meta property="og:image" content="https://getmoonshift.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Moonshift logo: a witch with a suitcase flying across a full moon" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Moonshift", "url": "https://getmoonshift.com/", "logo": "https://getmoonshift.com/assets/icon-512.png", "email": "support@getmoonshift.com"}</script>
   </head>
   <body>
-    <div id="site-header"></div>
-    <main>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/" aria-label="Moonshift home"><img src="/assets/mark.svg" alt="" width="36" height="36" />Moonshift</a>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="/product">How it works</a><a href="/pricing">Pricing</a><a href="/download">Download</a><a href="/about" aria-current="page">About</a><a href="/contact">Contact</a>
+          <a class="btn btn-primary btn-sm" href="/apply">Get early access</a>
+        </nav>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </header>
+    <main id="main">
       <section class="hero">
-        <div class="wrap">
-          <p class="eyebrow">About us</p>
-          <h1>We build the ghost<br />that carries the bag.</h1>
-          <p class="lede">GhostApply is a young company making one thing: a desktop app that applies to jobs from the computer you already sit at. The mark is a ghost holding a job bag. That is the whole pitch.</p>
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">About</p>
+            <h1>We make job hunting less of a grind.</h1>
+            <p class="lede">Moonshift is a small, independent software company with one product: a desktop app that takes the repetitive work out of applying for jobs.</p>
+          </div>
+          <img src="/assets/mark.svg" alt="The Moonshift logo: a witch on a broom, carrying a suitcase across a full moon" width="360" height="360" style="justify-self:center;width:min(360px,80%);height:auto" />
         </div>
       </section>
+
       <section class="section alt">
         <div class="wrap split">
           <div>
-            <p class="eyebrow">The company</p>
-            <h2>Small on purpose.</h2>
+            <p class="eyebrow">Our story</p>
+            <h2>Why we built it</h2>
           </div>
           <div class="legal">
-            <p>Most “auto apply” products want your password in the cloud and a browser you never see. That is a support nightmare and a trust problem. We started from the opposite: headed Chrome, local profiles, a license that lives on your computer, and boards added one at a time.</p>
-            <p>We are not a recruiting agency. We do not place you. We do not scrape a thousand boards on day one. We make the night of Easy Apply shorter, then we earn the next board.</p>
-            <p>Early Access means you are buying a working engine for Dice, ZipRecruiter and Greenhouse, and a seat at the table while LinkedIn and Talent.com are still marked coming soon in the app.</p>
-            <div class="team-note">
-              <img src="assets/logo.png" alt="GhostApply mark" />
-              <div>
-                <h3>GhostApply</h3>
-                <p class="muted">Product studio · Windows, Mac and Linux desktop · Early Access 2026. Contact lives on the next page — there is no fake 40-person roster here.</p>
-              </div>
-            </div>
+            <p>Applying for jobs today means filling in the same forms again and again. Most people send dozens of applications a week, and every one asks for the same details, the same resume and the same answers.</p>
+            <p>We built Moonshift to do that part for you, on your own computer, in a browser you can see. You decide where to apply. Moonshift does the typing.</p>
+            <p>The name and the logo come from how most people use it: start a run in the evening and wake up to a list of sent applications. The witch with her suitcase is on her way to something new.</p>
           </div>
         </div>
       </section>
+
       <section class="section">
         <div class="wrap">
-          <p class="eyebrow">Beliefs</p>
-          <div class="cards">
-            <article class="card"><h3>Local first</h3><p class="muted">Resume, job-board logins, Gemini key: your computer. We will not “sync your identity” to a farm of headless browsers.</p></article>
-            <article class="card"><h3>Honest boards</h3><p class="muted">If it is not ready, the menu says coming soon. Shipping a broken LinkedIn clicker would be worse than waiting.</p></article>
-            <article class="card"><h3>You in the loop</h3><p class="muted">OTP, captcha, weird interstitial: that is your job for 20 seconds. Then the engine continues.</p></article>
+          <div class="section-head">
+            <p class="eyebrow">What we believe</p>
+            <h2>How we work</h2>
+          </div>
+          <div class="grid-3">
+            <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg></span><h3>Your data, your computer</h3><p class="muted">Your resume, profile and job site logins stay on your machine. We only keep what we need to run your license.</p></article>
+            <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Honest about what works</h3><p class="muted">A job site is marked as available only when it works reliably. Until then it says coming soon.</p></article>
+            <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5a1.5 1.5 0 0 1 3 0v6M12 10V4a1.5 1.5 0 0 1 3 0v7M15 10.5V6a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-2.7L3 13.5a1.5 1.5 0 0 1 2.4-1.8L9 15"/></svg></span><h3>You in control</h3><p class="muted">Moonshift never logs in for you behind your back. You watch it work and step in whenever you want.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="cta-band">
+            <div>
+              <h2>Spend your evenings on interviews, not forms.</h2>
+              <p>Request early access and we will email your license key when your spot opens.</p>
+            </div>
+            <a class="btn btn-primary" href="/apply">Get early access</a>
           </div>
         </div>
       </section>
     </main>
-    <div id="site-footer"></div>
-    <script src="site.js"></script>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="36" height="36" />Moonshift</a>
+            <p class="muted">Job applications, sent from your own computer while you get on with your day.</p>
+          </div>
+          <div>
+            <h2>Product</h2>
+            <ul>
+              <li><a href="/product">How it works</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/download">Download</a></li>
+              <li><a href="/apply">Get early access</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="mailto:support@getmoonshift.com">support@getmoonshift.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Legal</h2>
+            <ul>
+              <li><a href="/privacy">Privacy policy</a></li>
+              <li><a href="/terms">Terms of service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; <span id="year">2026</span> Moonshift. Moonshift is an independent product and is not affiliated with or endorsed by LinkedIn, Dice, ZipRecruiter, Greenhouse, Naukri, Foundit or any other job site. Their names belong to their owners.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/site.js"></script>
   </body>
 </html>

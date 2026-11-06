@@ -1,92 +1,112 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GhostApply — Quiet applications</title>
-    <meta name="description" content="GhostApply is a desktop app for Windows, Mac and Linux that applies to jobs on Dice, ZipRecruiter and Greenhouse from your own computer. Chrome opens on your machine. You finish login." />
-    <link rel="icon" href="assets/logo.png" />
+    <title>Moonshift | Auto Apply to Jobs from Your Own Computer</title>
+    <meta name="description" content="Moonshift is a desktop app that fills in and sends job applications for you on LinkedIn, Dice, ZipRecruiter, Greenhouse and more. Runs on your computer. From $12 a month." />
+    <link rel="canonical" href="https://getmoonshift.com/" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Moonshift" />
+    <meta property="og:title" content="Moonshift | Auto Apply to Jobs from Your Own Computer" />
+    <meta property="og:description" content="Moonshift is a desktop app that fills in and sends job applications for you on LinkedIn, Dice, ZipRecruiter, Greenhouse and more. Runs on your computer. From $12 a month." />
+    <meta property="og:url" content="https://getmoonshift.com/" />
+    <meta property="og:image" content="https://getmoonshift.com/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Moonshift logo: a witch with a suitcase flying across a full moon" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Moonshift", "url": "https://getmoonshift.com/", "logo": "https://getmoonshift.com/assets/icon-512.png", "email": "support@getmoonshift.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Moonshift", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows 10, Windows 11, macOS, Linux", "description": "Desktop app that fills in and sends job applications on LinkedIn, Dice, ZipRecruiter, Greenhouse, Naukri and Foundit from your own computer.", "url": "https://getmoonshift.com/", "downloadUrl": "https://getmoonshift.com/download", "offers": [{"@type": "Offer", "name": "Monthly", "price": "12.00", "priceCurrency": "USD"}, {"@type": "Offer", "name": "3-month pass", "price": "29.00", "priceCurrency": "USD"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Moonshift a browser extension?", "acceptedAnswer": {"@type": "Answer", "text": "No. Moonshift is a desktop app for Windows, Mac and Linux. It opens Google Chrome on your computer and applies in that window, so you can watch it work."}}, {"@type": "Question", "name": "Which job sites does it work with?", "acceptedAnswer": {"@type": "Answer", "text": "LinkedIn (Easy Apply), Dice, ZipRecruiter and company career pages on Greenhouse, plus Naukri and Foundit in India. Glassdoor and Workday are on the way."}}, {"@type": "Question", "name": "Can using it affect my job site accounts?", "acceptedAnswer": {"@type": "Answer", "text": "It can. Each job site sets its own rules about automated tools, and some do not allow them. Moonshift works at a steady pace and limits LinkedIn to 40 applications a day, but we cannot control how a site treats your account. Please read the terms of the sites you use."}}, {"@type": "Question", "name": "Does my computer need to stay on?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Applications are sent from your computer, so keep it awake and online while a run is going."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "$12 a month, or $29 for three months. Early access is opening to small groups at a time. See pricing for details."}}, {"@type": "Question", "name": "Where is my information stored?", "acceptedAnswer": {"@type": "Answer", "text": "Your profile, resume, saved answers and job site logins stay on your computer. Read our privacy policy for the full picture."}}]}</script>
   </head>
   <body>
-    <div id="site-header"></div>
-    <main>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/" aria-label="Moonshift home"><img src="/assets/mark.svg" alt="" width="36" height="36" />Moonshift</a>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="/product">How it works</a><a href="/pricing">Pricing</a><a href="/download">Download</a><a href="/about">About</a><a href="/contact">Contact</a>
+          <a class="btn btn-primary btn-sm" href="/apply">Get early access</a>
+        </nav>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </header>
+    <main id="main">
       <section class="hero">
         <div class="wrap hero-grid">
           <div>
-            <p class="eyebrow">Early Access · Windows · Mac · Linux</p>
-            <h1>Apply while you <span>sleep</span> — stay in the room.</h1>
-            <p class="lede">
-              GhostApply is a desktop engine for job applications on Dice, ZipRecruiter and Greenhouse. It runs on your computer, opens real Chrome, and leaves login, OTP, and captcha to you. No cloud farm. No browser extension.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="download.html">Download GhostApply</a>
-              <a class="btn btn-ghost" href="pricing.html">Pricing — $12/month</a>
+            <p class="eyebrow">Desktop app for Windows, Mac and Linux</p>
+            <h1>Apply to jobs while you <span class="moonlit">sleep</span>.</h1>
+            <p class="lede">Moonshift fills in and sends job applications for you on LinkedIn, Dice, ZipRecruiter and more. It runs on your own computer, in a Chrome window you can watch, using your profile and resume.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="/apply">Get early access</a>
+              <a class="btn btn-ghost" href="/product">See how it works</a>
             </div>
-            <p class="fine">Dice, ZipRecruiter and Greenhouse are live. LinkedIn and Talent.com are coming soon. The app updates itself.</p>
+            <p class="fine hero-note">Plans from $12 a month. Cancel any time.</p>
           </div>
-          <div class="product-frame" aria-hidden="true">
-            <div class="fake-rail">
-              <p>GHOSTAPPLY</p>
-              <span class="pill on">Apply</span>
-              <span class="pill">Profile</span>
-              <span class="pill">Answers</span>
-              <span class="pill">Resume</span>
-              <span class="pill">Gaps</span>
-            </div>
-            <div class="fake-main">
-              <p class="eyebrow">Tonight’s run</p>
-              <h3>Send applications</h3>
-              <p class="muted">Dice, ZipRecruiter, Greenhouse. Chrome opens on this machine.</p>
-              <div class="bars">
-                <div class="bar"><i style="width:86%"></i></div>
-                <div class="bar"><i style="width:62%"></i></div>
-                <div class="bar"><i style="width:44%"></i></div>
-              </div>
-            </div>
+          <figure class="run-card" aria-label="Example of a run in the Moonshift app">
+            <div class="run-head"><strong>Tonight&#8217;s run</strong><span>18 of 25 sent</span></div>
+            <div class="run-meter" aria-hidden="true"><i></i></div>
+            <ul class="run-list">
+              <li><span class="job"><b>Data Engineer</b><small>Harbor Analytics &middot; LinkedIn</small></span><span class="tag sent">Sent</span></li>
+              <li><span class="job"><b>Backend Developer</b><small>Kestrel Systems &middot; Dice</small></span><span class="tag sent">Sent</span></li>
+              <li><span class="job"><b>Platform Engineer</b><small>Brightline Health &middot; Greenhouse</small></span><span class="tag wait">Needs your code</span></li>
+              <li><span class="job"><b>Software Engineer II</b><small>Tidewater Labs &middot; ZipRecruiter</small></span><span class="tag sent">Sent</span></li>
+            </ul>
+            <figcaption class="run-foot">Example run. Company names are made up.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section alt tight" aria-labelledby="boards-title">
+        <div class="wrap">
+          <h2 id="boards-title" class="eyebrow">Works with</h2>
+          <div class="boards-row">
+            <span class="board-chip"><span class="dot" aria-hidden="true"></span>LinkedIn</span>
+            <span class="board-chip"><span class="dot" aria-hidden="true"></span>Dice</span>
+            <span class="board-chip"><span class="dot" aria-hidden="true"></span>ZipRecruiter</span>
+            <span class="board-chip"><span class="dot" aria-hidden="true"></span>Greenhouse</span>
+            <span class="board-chip"><span class="dot" aria-hidden="true"></span>Naukri</span>
+            <span class="board-chip"><span class="dot" aria-hidden="true"></span>Foundit</span>
+            <span class="board-chip soon"><span class="dot" aria-hidden="true"></span>Glassdoor<span class="visually-hidden"> (coming soon)</span></span>
+            <span class="board-chip soon"><span class="dot" aria-hidden="true"></span>Workday<span class="visually-hidden"> (coming soon)</span></span>
           </div>
         </div>
       </section>
 
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>Dice · live</span><span class="dot">●</span>
-          <span>ZipRecruiter · live</span><span class="dot">●</span>
-          <span>Greenhouse · live</span><span class="dot">●</span>
-          <span>LinkedIn · coming soon</span><span class="dot">●</span>
-          <span>Talent.com · coming soon</span><span class="dot">●</span>
-          <span>Updates itself · always current</span><span class="dot">●</span>
-          <span>Dice · live</span><span class="dot">●</span>
-          <span>ZipRecruiter · live</span><span class="dot">●</span>
-          <span>Greenhouse · live</span><span class="dot">●</span>
-          <span>LinkedIn · coming soon</span><span class="dot">●</span>
-          <span>Talent.com · coming soon</span><span class="dot">●</span>
-          <span>Updates itself · always current</span><span class="dot">●</span>
-        </div>
-      </div>
-
       <section class="section">
         <div class="wrap">
-          <p class="eyebrow">Why it exists</p>
-          <h2>Job boards made apply a chore.<br />We made a quiet machine for it.</h2>
-          <div class="cards" style="margin-top:36px">
+          <div class="section-head">
+            <p class="eyebrow">Why Moonshift</p>
+            <h2>The busywork of a job search, handled.</h2>
+          </div>
+          <div class="grid-3">
             <article class="card">
-              <p class="eyebrow">01</p>
-              <h3>On your desk</h3>
-              <p class="muted">The engine lives on your computer — Windows, Mac or Linux. Profiles, resumes, and job-board logins stay there, not in a shared cloud browser.</p>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <h3>Hours back every week</h3>
+              <p class="muted">Searching, clicking apply and typing the same answers again takes most of a job search. Moonshift does that part, so your time goes to interviews.</p>
             </article>
             <article class="card">
-              <p class="eyebrow">02</p>
-              <h3>You still sign in</h3>
-              <p class="muted">When a site wants a code or a captcha, Chrome is right there. GhostApply does not pretend it can skip you.</p>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg></span>
+              <h3>Runs on your computer</h3>
+              <p class="muted">Moonshift opens a normal Chrome window on your machine. Your resume, profile and job site logins stay with you, not on our servers.</p>
             </article>
             <article class="card">
-              <p class="eyebrow">03</p>
-              <h3>Boards that work</h3>
-              <p class="muted">Dice, ZipRecruiter and Greenhouse are live. LinkedIn and Talent.com wait behind “coming soon” until they survive a real night.</p>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5a1.5 1.5 0 0 1 3 0v6M12 10V4a1.5 1.5 0 0 1 3 0v7M15 10.5V6a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-2.7L3 13.5a1.5 1.5 0 0 1 2.4-1.8L9 15"/></svg></span>
+              <h3>You stay in charge</h3>
+              <p class="muted">You choose the roles, locations and how many applications to send. If a site asks for a login code or a captcha, you type it in and Moonshift carries on.</p>
             </article>
           </div>
         </div>
@@ -95,13 +115,49 @@
       <section class="section alt">
         <div class="wrap split">
           <div>
-            <p class="eyebrow">How a night goes</p>
-            <h2>Three steps. Then you walk away.</h2>
+            <p class="eyebrow">How it works</p>
+            <h2>Set it up once. Then start a run whenever you like.</h2>
+            <p class="muted">Most people are set up in about fifteen minutes.</p>
           </div>
-          <div class="steps">
-            <div class="step"><div class="num">1</div><div><h3>Save a profile</h3><p class="muted">Name, work auth, skills, resume. Board logins and a Gemini key live in the app — you can change them without editing files.</p></div></div>
-            <div class="step"><div class="num">2</div><div><h3>Start a run</h3><p class="muted">Pick Dice, ZipRecruiter or Greenhouse, then keywords, location and a max count. Chrome opens. You finish anything the site throws at you.</p></div></div>
-            <div class="step"><div class="num">3</div><div><h3>Read the paper trail</h3><p class="muted">Answers keeps every application and what was filled in. Gaps lists questions Gemini couldn’t answer — answer once, save it to your profile in one click, and later runs reuse it.</p></div></div>
+          <ol class="steps">
+            <li><div><h3>Fill in your profile</h3><p>Your details, work authorization, salary expectations and resume, plus answers to the questions employers ask most.</p></div></li>
+            <li><div><h3>Start a run</h3><p>Pick a job site, enter job titles and a location, and choose how many applications to send. Chrome opens and Moonshift gets to work.</p></div></li>
+            <li><div><h3>See what was sent</h3><p>Every application is listed with the answers it used. Questions it could not answer are saved for you, so you answer once and the next run reuses it.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">Questions</p>
+            <h2>Good to know</h2>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>Is Moonshift a browser extension?</summary>
+              <p>No. Moonshift is a desktop app for Windows, Mac and Linux. It opens Google Chrome on your computer and applies in that window, so you can watch it work.</p>
+            </details>
+            <details>
+              <summary>Which job sites does it work with?</summary>
+              <p>LinkedIn (Easy Apply), Dice, ZipRecruiter and company career pages on Greenhouse, plus Naukri and Foundit in India. Glassdoor and Workday are on the way.</p>
+            </details>
+            <details>
+              <summary>Can using it affect my job site accounts?</summary>
+              <p>It can. Each job site sets its own rules about automated tools, and some do not allow them. Moonshift works at a steady pace and limits LinkedIn to 40 applications a day, but we cannot control how a site treats your account. Please read the terms of the sites you use.</p>
+            </details>
+            <details>
+              <summary>Does my computer need to stay on?</summary>
+              <p>Yes. Applications are sent from your computer, so keep it awake and online while a run is going.</p>
+            </details>
+            <details>
+              <summary>How much does it cost?</summary>
+              <p>$12 a month, or $29 for three months. Early access is opening to small groups at a time. See <a href="/pricing">pricing</a> for details.</p>
+            </details>
+            <details>
+              <summary>Where is my information stored?</summary>
+              <p>Your profile, resume, saved answers and job site logins stay on your computer. Read our <a href="/privacy">privacy policy</a> for the full picture.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -110,18 +166,51 @@
         <div class="wrap">
           <div class="cta-band">
             <div>
-              <p class="eyebrow">Early Access</p>
-              <h2>Install it. Paste a key.<br />Apply tonight.</h2>
-              <p class="lede">Unlimited applications for $12 a month, or $29 for a 3-month job search. An app for Windows, Mac or Linux that keeps itself up to date.</p>
+              <h2>Spend your evenings on interviews, not forms.</h2>
+              <p>Request early access and we will email your license key when your spot opens.</p>
             </div>
-            <div>
-              <a class="btn btn-primary" href="download.html">Download GhostApply</a>
-            </div>
+            <a class="btn btn-primary" href="/apply">Get early access</a>
           </div>
         </div>
       </section>
     </main>
-    <div id="site-footer"></div>
-    <script src="site.js"></script>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="36" height="36" />Moonshift</a>
+            <p class="muted">Job applications, sent from your own computer while you get on with your day.</p>
+          </div>
+          <div>
+            <h2>Product</h2>
+            <ul>
+              <li><a href="/product">How it works</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/download">Download</a></li>
+              <li><a href="/apply">Get early access</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="mailto:support@getmoonshift.com">support@getmoonshift.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Legal</h2>
+            <ul>
+              <li><a href="/privacy">Privacy policy</a></li>
+              <li><a href="/terms">Terms of service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; <span id="year">2026</span> Moonshift. Moonshift is an independent product and is not affiliated with or endorsed by LinkedIn, Dice, ZipRecruiter, Greenhouse, Naukri, Foundit or any other job site. Their names belong to their owners.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/site.js"></script>
   </body>
 </html>

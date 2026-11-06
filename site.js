@@ -1,80 +1,62 @@
-const pages = [
-  ["index.html", "Home"],
-  ["product.html", "Product"],
-  ["pricing.html", "Pricing"],
-  ["download.html", "Download"],
-  ["about.html", "About"],
-  ["contact.html", "Contact"],
-];
+// Moonshift website: light/dark switch, mobile menu, download buttons and the early access form.
 
-function currentFile() {
-  const name = location.pathname.split("/").pop();
-  return name && name.endsWith(".html") ? name : "index.html";
+// The site moved to getmoonshift.com. The old GitHub Pages address keeps working (old links,
+// emails), but visitors there are sent to the same page on the new domain - only once the new
+// domain actually answers, so nothing breaks before it is set up.
+const NEW_SITE = "https://getmoonshift.com";
+if (location.hostname.endsWith("github.io")) {
+  const path = location.pathname.replace(/^\/ghostapply-releases/, "") || "/";
+  const target = NEW_SITE + path + location.search + location.hash;
+  const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 4000));
+  Promise.race([fetch(NEW_SITE + "/", { mode: "no-cors", cache: "no-store" }), timeout])
+    .then(() => location.replace(target))
+    .catch(() => {});
 }
 
-function headerHTML() {
-  const here = currentFile();
-  const links = pages
-    .map(([href, label]) => {
-      const current = href === here ? ' aria-current="page"' : "";
-      return `<a href="${href}"${current}>${label}</a>`;
-    })
-    .join("");
-  return `
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" />GhostApply</a>
-        <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
-        <nav class="nav">
-          ${links}
-          <a class="btn btn-primary" href="apply.html">Request access</a>
-        </nav>
-      </div>
-    </header>`;
+// ---- Footer year (header and footer are written into each page for search engines) -------
+
+const year = document.getElementById("year");
+if (year) year.textContent = String(new Date().getFullYear());
+
+// ---- Light / dark -------------------------------------------------------------------------
+// A small script in each page's <head> applies the saved choice before the page paints.
+
+function effectiveTheme() {
+  const set = document.documentElement.dataset.theme;
+  if (set === "light" || set === "dark") return set;
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
-function footerHTML() {
-  return `
-    <footer class="site-footer">
-      <div class="wrap">
-        <div>
-          <a class="brand" href="index.html"><img src="assets/logo.png" alt="" />GhostApply</a>
-          <p>Quiet applications. A desktop engine that applies from your PC — you stay in the loop.</p>
-        </div>
-        <div>
-          <strong>Product</strong>
-          <a href="product.html">How it works</a><br />
-          <a href="download.html">Download</a><br />
-          <a href="apply.html">Request access</a><br />
-          <a href="pricing.html">Pricing &amp; billing</a>
-        </div>
-        <div>
-          <strong>Company</strong>
-          <a href="about.html">About</a><br />
-          <a href="contact.html">Contact</a>
-        </div>
-        <div>
-          <strong>Legal</strong>
-          <a href="privacy.html">Privacy</a><br />
-          <a href="terms.html">Terms</a><br />
-          <span>© ${new Date().getFullYear()} GhostApply</span>
-        </div>
-      </div>
-    </footer>`;
+function syncThemeColor() {
+  const meta = document.querySelector('meta[name="theme-color"]:not([media])');
+  if (meta) meta.setAttribute("content", effectiveTheme() === "dark" ? "#0e1126" : "#f6f7fb");
 }
 
-document.getElementById("site-header").outerHTML = headerHTML();
-document.getElementById("site-footer").outerHTML = footerHTML();
+document.querySelector(".theme-toggle")?.addEventListener("click", () => {
+  const next = effectiveTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch { /* private mode: still switches for this visit */ }
+  syncThemeColor();
+});
+syncThemeColor();
 
-// Direct file downloads (Cursor-style). Every release publishes latest.json next to this
-// site with the exact installer URLs, so the buttons always point at the newest build.
-// Fallbacks: the GitHub API (rate-limited), then the release page (never a dead link).
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+navToggle?.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+});
+
+// ---- Download buttons ---------------------------------------------------------------------
+// Every release publishes latest.json next to this site with the exact installer links, so the
+// buttons always point at the newest build. Fallbacks: the GitHub API, then the release page.
+
 const RELEASES_REPO = "Meet090201vora/ghostapply-releases";
-const RELEASES_PAGE = `https://github.com/${RELEASES_REPO}/releases/latest`;
 const RELEASES_API = `https://api.github.com/repos/${RELEASES_REPO}/releases/latest`;
 const MANIFEST_URLS = [
-  "latest.json",
-  "https://meet090201vora.github.io/ghostapply-releases/latest.json",
+  "/latest.json",
+  "https://raw.githubusercontent.com/Meet090201vora/ghostapply-releases/main/latest.json",
 ];
 
 function setDownload(el, url, filename) {
@@ -82,7 +64,6 @@ function setDownload(el, url, filename) {
   el.href = url;
   if (filename) el.setAttribute("download", filename);
   else el.removeAttribute("download");
-  el.removeAttribute("target");
 }
 
 async function fetchJSON(url) {
@@ -91,7 +72,7 @@ async function fetchJSON(url) {
   return response.json();
 }
 
-// Installer names follow Tauri's pattern, so a manifest without a "downloads" block still works.
+// Installer file names as each release publishes them.
 function installersFor(version) {
   const base = `https://github.com/${RELEASES_REPO}/releases/download/v${version}`;
   const files = {
@@ -99,9 +80,7 @@ function installersFor(version) {
     mac: `GhostApply_${version}_universal.dmg`,
     linux: `GhostApply_${version}_amd64.AppImage`,
   };
-  return Object.fromEntries(
-    Object.entries(files).map(([os, file]) => [os, { url: `${base}/${file}`, file }]),
-  );
+  return Object.fromEntries(Object.entries(files).map(([os, file]) => [os, { url: `${base}/${file}`, file }]));
 }
 
 async function fromManifest() {
@@ -110,12 +89,7 @@ async function fromManifest() {
       const manifest = await fetchJSON(url);
       const version = String(manifest.version || "").replace(/^v/, "");
       if (!version) continue;
-      return {
-        version,
-        notes: manifest.notes || "",
-        date: manifest.pub_date || "",
-        downloads: manifest.downloads || null, // older manifests have no installer links
-      };
+      return { version, notes: manifest.notes || "", date: manifest.pub_date || "", downloads: manifest.downloads || null };
     } catch {
       // try the next source
     }
@@ -134,7 +108,6 @@ async function fromReleasesApi() {
     version: String(release.tag_name || "").replace(/^v/, ""),
     notes: release.body || "",
     date: release.published_at || "",
-    // Installers only — never the engine archives or updater bundles.
     downloads: {
       windows: pick((n) => n.endsWith("-setup.exe")),
       mac: pick((n) => n.endsWith(".dmg")),
@@ -145,10 +118,10 @@ async function fromReleasesApi() {
 
 function detectOS() {
   const ua = `${navigator.userAgentData?.platform || ""} ${navigator.platform || ""} ${navigator.userAgent}`.toLowerCase();
-  if (/iphone|ipad|ipod|android/.test(ua)) return ""; // phones: no desktop build to favor
+  if (/iphone|ipad|ipod|android/.test(ua)) return "";
   if (ua.includes("win")) return "windows";
   if (ua.includes("mac")) return "mac";
-  if (ua.includes("linux") && !ua.includes("android")) return "linux";
+  if (ua.includes("linux")) return "linux";
   return "";
 }
 
@@ -160,17 +133,18 @@ async function wireDownloadLinks() {
   };
   if (!buttons.windows && !buttons.mac && !buttons.linux) return;
 
-  // Put this visitor's platform first.
+  // Put this visitor's computer first.
   const os = detectOS();
-  const mine = buttons[os];
-  if (mine && mine.parentElement) {
-    mine.parentElement.prepend(mine);
-    mine.classList.add("btn-primary");
-    mine.classList.remove("btn-ghost");
-    if (os === "linux") mine.textContent = "Download for Linux";
+  for (const [key, el] of Object.entries(buttons)) {
+    if (!el) continue;
+    const mine = key === os;
+    el.classList.toggle("btn-primary", mine || (!os && key === "windows"));
+    el.classList.toggle("btn-ghost", !(mine || (!os && key === "windows")));
   }
+  if (buttons[os]?.parentElement) buttons[os].parentElement.prepend(buttons[os]);
+  const phoneNote = document.querySelector("#dl-phone");
+  if (phoneNote && /iphone|ipad|ipod|android/i.test(navigator.userAgent)) phoneNote.hidden = false;
 
-  // 1) the manifest's exact links, 2) the release's real assets, 3) names built from the version.
   let release = await fromManifest();
   if (!release || !release.downloads) {
     try {
@@ -187,18 +161,18 @@ async function wireDownloadLinks() {
   }
 
   if (release.version) {
-    const fine = document.querySelector("#dl-version");
-    if (fine) {
+    const line = document.querySelector("#dl-version");
+    if (line) {
       let when = "";
       const date = release.date ? new Date(release.date) : null;
       if (date && !Number.isNaN(date.getTime())) {
-        when = ` · released ${date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}`;
+        when = `, released ${date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
       }
-      fine.textContent = `Version ${release.version}${when} · Early Access · updates itself`;
+      line.textContent = `Version ${release.version}${when}. Updates itself after you install it.`;
     }
     const notes = document.querySelector("#dl-notes");
     if (notes && release.notes) {
-      document.querySelector("#dl-notes-title").textContent = `What’s new in ${release.version}`;
+      document.querySelector("#dl-notes-title").textContent = `New in version ${release.version}`;
       document.querySelector("#dl-notes-body").textContent = release.notes;
       notes.hidden = false;
     }
@@ -206,40 +180,8 @@ async function wireDownloadLinks() {
 }
 wireDownloadLinks();
 
-const toggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".nav");
-toggle?.addEventListener("click", () => nav.classList.toggle("open"));
+// ---- Early access form -> Google Apps Script (saves a row in the Sheet, emails the person) ----
 
-const PLANS = {
-  monthly: { line: "$12 / month", name: "GhostApply Pro — monthly", price: "$12" },
-  pass: { line: "$29 / 3 months", name: "GhostApply Job Search Pass — 3 months", price: "$29" },
-};
-const planSelect = document.querySelector("#plan-select");
-function showPlan(key) {
-  const plan = PLANS[key] || PLANS.monthly;
-  document.querySelector("#plan-line").textContent = plan.line;
-  document.querySelector("#plan-name").textContent = plan.name;
-  document.querySelector("#plan-price").textContent = plan.price;
-}
-if (planSelect) {
-  const wanted = new URLSearchParams(location.search).get("plan");
-  if (wanted && PLANS[wanted]) planSelect.value = wanted;
-  showPlan(planSelect.value);
-  planSelect.addEventListener("change", () => showPlan(planSelect.value));
-}
-
-const form = document.querySelector("#checkout-form");
-if (form) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const box = document.querySelector("#checkout-status");
-    box.className = "notice ok";
-    box.textContent =
-      "Got it. Card checkout is not live on this preview yet — we will email this address a GA1 license key after payment is connected. Keep this tab: you can still download the app now.";
-  });
-}
-
-// Request access form -> Google Apps Script (saves a row in your Sheet, emails the applicant).
 const accessForm = document.querySelector("#access-form");
 if (accessForm) {
   const status = document.querySelector("#access-status");
@@ -262,16 +204,13 @@ if (accessForm) {
     }
     const linkedin = accessForm.elements.linkedin;
     flag(linkedin, linkedin.value.trim() !== "" && !linkedin.checkValidity());
-    const os = accessForm.querySelector("#os-group");
-    flag(os, !accessForm.querySelector('input[name="os"]:checked'));
-    const consent = accessForm.querySelector(".consent");
-    flag(consent, !accessForm.elements.consent.checked);
+    flag(accessForm.querySelector("#os-group"), !accessForm.querySelector('input[name="os"]:checked'));
+    flag(accessForm.querySelector(".consent"), !accessForm.elements.consent.checked);
     return first;
   }
 
   accessForm.addEventListener("input", (event) => {
-    const el = event.target.closest(".invalid") || event.target;
-    if (el.classList.contains("invalid")) mark(el, false);
+    if (event.target.classList.contains("invalid")) mark(event.target, false);
     const group = event.target.closest(".chip-group, .consent");
     if (group) mark(group, false);
   });
@@ -282,19 +221,16 @@ if (accessForm) {
     const bad = validate();
     if (bad) {
       say("Please fill in the highlighted fields.", "err");
-      (bad.querySelector ? bad.querySelector("input") || bad : bad).focus?.();
+      const target = bad.matches("input, select, textarea") ? bad : bad.querySelector("input");
+      target?.focus();
       return;
     }
     const endpoint = accessForm.dataset.endpoint || "";
-    if (!endpoint.startsWith("https://")) {
-      say("Requests aren't connected yet. Email us from the Contact page and we'll add you by hand.", "err");
-      return;
-    }
 
-    const form = new FormData(accessForm);
+    const data = new FormData(accessForm);
     const payload = Object.fromEntries(
-      [...new Set(form.keys())].map((key) => {
-        const values = form.getAll(key).map((v) => String(v).trim());
+      [...new Set(data.keys())].map((key) => {
+        const values = data.getAll(key).map((v) => String(v).trim());
         return [key, key === "boards" ? values : values[0] || ""];
       }),
     );
@@ -302,7 +238,7 @@ if (accessForm) {
     payload.userAgent = navigator.userAgent;
 
     button.disabled = true;
-    button.innerHTML = '<span class="spinner"></span>Sending…';
+    button.innerHTML = '<span class="spinner" aria-hidden="true"></span>Sending';
     try {
       // text/plain keeps this a "simple" request, so the browser skips the CORS preflight Apps Script can't answer.
       const response = await fetch(endpoint, {
@@ -312,29 +248,20 @@ if (accessForm) {
       });
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || "Something went wrong.");
-      document.querySelector("#access-name").textContent = payload.name.split(/\s+/)[0] || "friend";
+      document.querySelector("#access-name").textContent = payload.name.split(/\s+/)[0] || "there";
       document.querySelector("#access-email").textContent = payload.email;
       accessForm.hidden = true;
       const done = document.querySelector("#access-done");
       done.hidden = false;
       done.scrollIntoView({ behavior: "smooth", block: "center" });
+      done.querySelector("h2")?.focus();
     } catch (error) {
-      const offline = error instanceof TypeError; // network/CORS: the request never got an answer
+      const offline = error instanceof TypeError; // the request never got an answer
       say(offline
-        ? "We couldn't reach our sign-up service. Check your connection and try again — or email us from the Contact page."
+        ? "We couldn't send your request. Check your internet connection and try again, or email support@getmoonshift.com."
         : `${error.message} Please try again in a minute.`, "err");
       button.disabled = false;
       button.innerHTML = buttonLabel;
     }
-  });
-}
-
-const contact = document.querySelector("#contact-form");
-if (contact) {
-  contact.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const box = document.querySelector("#contact-status");
-    box.className = "notice ok";
-    box.textContent = "Message saved on this preview. Wire this form to your email or helpdesk before launch.";
   });
 }

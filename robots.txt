@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getmoonshift.com/sitemap.xml

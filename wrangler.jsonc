@@ -1,0 +1,12 @@
+// Cloudflare hosting for the website (getmoonshift.com).
+// publish-site.yml copies website/ into the public ghostapply-releases repo; Cloudflare
+// (Workers & Pages, connected to that repo) redeploys it on every push. No build step:
+// the files are served as they are, including latest.json / updater.json at the root.
+{
+  "name": "moonshift-site",
+  "compatibility_date": "2026-11-06",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
