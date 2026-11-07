@@ -20,7 +20,7 @@ $EngineUrl = "https://github.com/$PublicRepo/releases/latest/download/ghostapply
 $Data = Join-Path $env:LOCALAPPDATA "GhostApply"
 $App = Join-Path $Data "app"
 
-Write-Host "== GhostApply engine installer ==" -ForegroundColor Cyan
+Write-Host "== Moonshift engine installer ==" -ForegroundColor Cyan
 
 # 1. Python 3.11+
 $PythonOk = $false
@@ -38,7 +38,7 @@ if (-not $PythonOk) {
 }
 
 # 2. Download the latest engine release
-Write-Host "Downloading the GhostApply engine..."
+Write-Host "Downloading the Moonshift engine..."
 $Zip = Join-Path $env:TEMP "ghostapply-engine.zip"
 $Extract = Join-Path $env:TEMP "ghostapply-extract"
 Invoke-WebRequest $EngineUrl -OutFile $Zip
@@ -86,4 +86,4 @@ Remove-Item $Zip, $Extract -Recurse -Force -ErrorAction SilentlyContinue
 
 Write-Host ""
 Write-Host "All set!" -ForegroundColor Green
-Write-Host "Open GhostApply (or click 'Try again' if it is already open)."
+Write-Host "Open Moonshift (or click 'Try again' if it is already open)."

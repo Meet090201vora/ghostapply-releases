@@ -21,15 +21,14 @@ if (year) year.textContent = String(new Date().getFullYear());
 // ---- Light / dark -------------------------------------------------------------------------
 // A small script in each page's <head> applies the saved choice before the page paints.
 
+// Dark is the default; light only when the visitor picks it.
 function effectiveTheme() {
-  const set = document.documentElement.dataset.theme;
-  if (set === "light" || set === "dark") return set;
-  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return document.documentElement.dataset.theme === "light" ? "light" : "dark";
 }
 
 function syncThemeColor() {
   const meta = document.querySelector('meta[name="theme-color"]:not([media])');
-  if (meta) meta.setAttribute("content", effectiveTheme() === "dark" ? "#0e1126" : "#f6f7fb");
+  if (meta) meta.setAttribute("content", effectiveTheme() === "dark" ? "#0b0d10" : "#f6f7f9");
 }
 
 document.querySelector(".theme-toggle")?.addEventListener("click", () => {
@@ -72,13 +71,15 @@ async function fetchJSON(url) {
   return response.json();
 }
 
-// Installer file names as each release publishes them.
+// Installer file names as each release publishes them (the app was called GhostApply before 0.5.0).
 function installersFor(version) {
   const base = `https://github.com/${RELEASES_REPO}/releases/download/v${version}`;
+  const [major, minor] = version.split(".").map(Number);
+  const name = major > 0 || minor >= 5 ? "Moonshift" : "GhostApply";
   const files = {
-    windows: `GhostApply_${version}_x64-setup.exe`,
-    mac: `GhostApply_${version}_universal.dmg`,
-    linux: `GhostApply_${version}_amd64.AppImage`,
+    windows: `${name}_${version}_x64-setup.exe`,
+    mac: `${name}_${version}_universal.dmg`,
+    linux: `${name}_${version}_amd64.AppImage`,
   };
   return Object.fromEntries(Object.entries(files).map(([os, file]) => [os, { url: `${base}/${file}`, file }]));
 }

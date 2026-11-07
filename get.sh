@@ -23,14 +23,14 @@ case "$(uname -s)" in
 esac
 APP="$DATA/app"
 
-echo "== GhostApply engine installer =="
+echo "== Moonshift engine installer =="
 
 if ! command -v python3 >/dev/null 2>&1; then
   echo "Python 3.11+ is required. Install it from https://www.python.org/downloads/ and run this again."
   exit 1
 fi
 
-echo "Downloading the GhostApply engine..."
+echo "Downloading the Moonshift engine..."
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 mkdir -p "$TMP/engine"
@@ -68,4 +68,4 @@ printf '%s' "$APP" > "$DATA/install-root.txt"
 
 echo
 echo "All set!"
-echo "Open GhostApply (or click 'Try again' if it is already open)."
+echo "Open Moonshift (or click 'Try again' if it is already open)."
