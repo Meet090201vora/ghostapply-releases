@@ -11,3 +11,7 @@
 /updater.json
   Access-Control-Allow-Origin: *
   Cache-Control: no-cache
+
+# Built files carry a hash in their name, so they can be cached for good.
+/build/*
+  Cache-Control: public, max-age=31536000, immutable
