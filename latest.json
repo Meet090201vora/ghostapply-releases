@@ -1,37 +1,37 @@
 {
-  "version": "0.4.3",
+  "version": "0.5.0",
   "notes": "Fixed Chrome not starting on some computers; fixed LinkedIn stopping after the first page on Windows; clearer messages when the browser is closed",
-  "download_url": "https://meet090201vora.github.io/ghostapply-releases/download.html",
-  "pub_date": "2026-11-05T04:09:49Z",
+  "download_url": "https://getmoonshift.com/download",
+  "pub_date": "2026-11-12T05:41:39Z",
   "engine": {
-    "version": "0.4.3",
-    "content_hash": "5f31375d002beb1b1f624df4ce49629ca391a58815b41d3714132a3fed7ff9aa",
-    "deps_hash": "c4b956ccec3d49ec706bc41962d9f932f21c0487c33e830bafb551e4bc11dcb4",
+    "version": "0.5.0",
+    "content_hash": "3db7c71e79e611ca743a19ac40f0c79ba8b08d7e145ec1d18cb760cefc97c3eb",
+    "deps_hash": "787633dde6a17f87486a2edbc082e6508ea309d379f5f285ce84f3d7f851a9ac",
     "zip": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/ghostapply-engine.zip",
-      "sha256": "c94c95d59873e64e2cac1a60ba95ca36f2cc95c65030445ce0aa567f0c01d409",
-      "size": 710945
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.0/ghostapply-engine.zip",
+      "sha256": "6c1f7b49ca9a23925d7825624ba7cf7613014f59cf29e9328cb168877a4918e2",
+      "size": 762625
     },
     "tar": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/ghostapply-engine.tar.gz",
-      "sha256": "c65dc0a0b35f4aab71dc7c04155807713d6c0af56c34fb7f7f6c81f2c1d6f795",
-      "size": 681884
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.0/ghostapply-engine.tar.gz",
+      "sha256": "d7c45ec4fbad83af929096c7e48298861917cb970790c1b81692c0026d77f4b5",
+      "size": 733672
     }
   },
   "shell": {
-    "version": "0.4.3",
+    "version": "0.5.0",
     "auto": true
   },
   "downloads": {
     "windows": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/GhostApply_0.4.3_x64-setup.exe",
-      "file": "GhostApply_0.4.3_x64-setup.exe",
-      "size": 18550587
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.0/Moonshift_0.5.0_x64-setup.exe",
+      "file": "Moonshift_0.5.0_x64-setup.exe",
+      "size": 18755266
     },
     "mac": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.4.3/GhostApply_0.4.3_universal.dmg",
-      "file": "GhostApply_0.4.3_universal.dmg",
-      "size": 42217024
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.0/Moonshift_0.5.0_universal.dmg",
+      "file": "Moonshift_0.5.0_universal.dmg",
+      "size": 42650704
     }
   }
 }
