@@ -1,19 +1,19 @@
 {
-  "version": "0.5.0",
-  "notes": "Fixed Chrome not starting on some computers; fixed LinkedIn stopping after the first page on Windows; clearer messages when the browser is closed",
-  "pub_date": "2026-11-12T05:41:39Z",
+  "version": "0.5.2",
+  "notes": "Answers: list view with job title, compact header, framed filters with job board and profile filters. Gaps: list and kanban views.",
+  "pub_date": "2026-11-12T19:23:29Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.0/Moonshift_0.5.0_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTJHTVUxWFBpN0NzQjFSWkZLc2grdWlLQ0VXV0hMUkh1UUY0RzJMcGFBZ2VaS0srcUluUmx5OHdNeFNlbEtBR3pndWRYRUx4VnZjZjBQajJibFJvdUFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDYyMDc1CWZpbGU6TW9vbnNoaWZ0XzAuNS4wX3g2NC1zZXR1cC5leGUKcXBUYWlZRW1oUXZ0SzY2K2YydEtIc1lEQkt1REtMTWdWQzBaaXk2TGpKUmhNazRSb1dlR1kvWkUzbFViODRlWVorR0tobmJET0dmSlRNWHRLK2pvQ0E9PQo="
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.2/Moonshift_0.5.2_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTFGR0xaSEI1Y0tOeE1KaTd1ZkNLYVBVZFRvd1dieTcrR2dlMkJLVXY0TU1vYjA0ZkhPSWZHbFJtcGo3L3ZLYWZFU0g1RCt1Q0dqcElKV29Sdk1FdWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTExMzcwCWZpbGU6TW9vbnNoaWZ0XzAuNS4yX3g2NC1zZXR1cC5leGUKbFRsNmEyRkpGWDIwQ3ZIeS80eUM4WVNYWlVQS0RJQ2liU2R4SWpBQ0x4YkxreEVhU2xBcmVlOGtGcVdVN0RqS2ZhNytyRmJTVXhTUnkvbkJhK2JsQ3c9PQo="
     },
     "darwin-aarch64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.0/Moonshift.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYStyQzM0NWlYaWlENC9JYlE4cGpVY2FxUFBvejdWWENJbkYwNXVBRmZnRENZMzJNckM0eVdMcFpwbTd5ZEdTdkE2SStxMmhFYlJsVG5FczJYcG85N3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDYxNjM5CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKaDVtUlE0bWNNZ25nclRiVHRBWmVZams0Um9HWkdHZDg2cm4xUjR5dFpGSFRNaHdQNk9xUG90a1RUbVhtc1JpYVZEMFNhWStwa056Y3R2YXlKSjhXQnc9PQo="
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.2/Moonshift.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYXdRSS9rV0ZDWlI1R005bm5pSEdPbUk1dG51RU1UUjBIelpZOEs2alRGK2cxK3J2akRoYk1yV3grS1VMeGdRUHVyVWFyR2NlSkxxdjZ3QTRmaTZ5UlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTEwOTU1CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKdmtuMGEra09CbWZDQk50MHNoUmJLZnNTcWR2aVVJRVZGa0NPaFRhZzhxT0dadkNVTEJJZU1Qa0RtZG9XdTRHUVYyUUM4WkJGS05ZNWdjR1NORFNxQmc9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.0/Moonshift.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYStyQzM0NWlYaWlENC9JYlE4cGpVY2FxUFBvejdWWENJbkYwNXVBRmZnRENZMzJNckM0eVdMcFpwbTd5ZEdTdkE2SStxMmhFYlJsVG5FczJYcG85N3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDYxNjM5CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKaDVtUlE0bWNNZ25nclRiVHRBWmVZams0Um9HWkdHZDg2cm4xUjR5dFpGSFRNaHdQNk9xUG90a1RUbVhtc1JpYVZEMFNhWStwa056Y3R2YXlKSjhXQnc9PQo="
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.2/Moonshift.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYXdRSS9rV0ZDWlI1R005bm5pSEdPbUk1dG51RU1UUjBIelpZOEs2alRGK2cxK3J2akRoYk1yV3grS1VMeGdRUHVyVWFyR2NlSkxxdjZ3QTRmaTZ5UlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTEwOTU1CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKdmtuMGEra09CbWZDQk50MHNoUmJLZnNTcWR2aVVJRVZGa0NPaFRhZzhxT0dadkNVTEJJZU1Qa0RtZG9XdTRHUVYyUUM4WkJGS05ZNWdjR1NORFNxQmc9PQo="
     }
   }
 }
