@@ -1,37 +1,37 @@
 {
-  "version": "0.5.2",
-  "notes": "Answers: list view with job title, compact header, framed filters with job board and profile filters. Gaps: list and kanban views.",
+  "version": "0.6.0",
+  "notes": "Sign in to each job board yourself once and Moonshift remembers it. Keep several resumes and pick one per run. New ZipRecruiter filters. Redesigned Apply and Settings pages.",
   "download_url": "https://getmoonshift.com/download",
-  "pub_date": "2026-11-12T19:23:29Z",
+  "pub_date": "2026-11-21T22:33:42Z",
   "engine": {
-    "version": "0.5.2",
-    "content_hash": "e18280514a47acf26779c49b6299d916001b187762742d52ee579ae7b0d7549e",
-    "deps_hash": "83db89c65a6b34965484a73d02a283e70f69fab45cd389691c5f262359283147",
+    "version": "0.6.0",
+    "content_hash": "ce1be64b0e765506be454ea5f9479daa121c47c2b072805ae3c111852d8d80d2",
+    "deps_hash": "4932349eeed01315fd3ff9a669910e3f3396ca3e8aa68b13c7e878c95f17ac57",
     "zip": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.2/ghostapply-engine.zip",
-      "sha256": "fcdb813a7bb561796d70920e7a5de0538955593408302016038cd78340b7e0d3",
-      "size": 893521
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.0/ghostapply-engine.zip",
+      "sha256": "06038cb1539b2c110f0fd1e0c21db0abaac34c610d029e1115e5389bc30e7c64",
+      "size": 930914
     },
     "tar": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.2/ghostapply-engine.tar.gz",
-      "sha256": "96469f0d84c68ba14529f66dfd810fe31eaee26c590be3a90ee45e9daa7c9db1",
-      "size": 858235
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.0/ghostapply-engine.tar.gz",
+      "sha256": "83343f4e6544d5a6e8998d14d7982e4fdf8cacaf722c97a7b6f2722c973c335f",
+      "size": 893153
     }
   },
   "shell": {
-    "version": "0.5.2",
+    "version": "0.6.0",
     "auto": true
   },
   "downloads": {
     "windows": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.2/Moonshift_0.5.2_x64-setup.exe",
-      "file": "Moonshift_0.5.2_x64-setup.exe",
-      "size": 18905203
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.0/Moonshift_0.6.0_x64-setup.exe",
+      "file": "Moonshift_0.6.0_x64-setup.exe",
+      "size": 18942442
     },
     "mac": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.5.2/Moonshift_0.5.2_universal.dmg",
-      "file": "Moonshift_0.5.2_universal.dmg",
-      "size": 43021773
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.0/Moonshift_0.6.0_universal.dmg",
+      "file": "Moonshift_0.6.0_universal.dmg",
+      "size": 43057475
     }
   }
 }
