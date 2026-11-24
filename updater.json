@@ -1,19 +1,19 @@
 {
-  "version": "0.6.0",
-  "notes": "Sign in to each job board yourself once and Moonshift remembers it. Keep several resumes and pick one per run. New ZipRecruiter filters. Redesigned Apply and Settings pages.",
-  "pub_date": "2026-11-21T22:33:42Z",
+  "version": "0.6.1",
+  "notes": "Dice now swaps in your Moonshift resume. Resumes upload under the names you gave them. One job title per run. Your last run's filters come back automatically. Cleaner run panel.",
+  "pub_date": "2026-11-24T04:28:53Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.0/Moonshift_0.6.0_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTNEdEFaQlBvR1Z2V2lzbjlxc2NzdVRNR0lOTm1MdGd5bHhFZEZxK2RrQ1lQWWhpMk8zbm5BbHd6QUszZzZvNWt1empkVENUcHpkeGhheklVL1R1c3dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzAwMzcwCWZpbGU6TW9vbnNoaWZ0XzAuNi4wX3g2NC1zZXR1cC5leGUKVVdsWEN2dkVXbUJyWmxKRmVKVmlTNjlrVW5sbnBGa25KdlJScTRYRWtIWTFReUVKaTZZeGdCZlJ1SS9IajVlTS9TSWluOE5mKzhJR3FsWXZ4YzNYQUE9PQo="
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.1/Moonshift_0.6.1_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYTh5WTRSdk1MdE1hNm10Q2VKNmdkMTJodVJjZTdSS3FCeVh1SlB6djlmYW5pbWhoWWFHTnRrNHJVM1p4L3hRTGJDMFpFeXozRXQ1ZUxxQ0JYL2tvK3dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NDk0NTEwCWZpbGU6TW9vbnNoaWZ0XzAuNi4xX3g2NC1zZXR1cC5leGUKcis3OFJxWFVPQVN1bnMzMWRHTVROVlBzMVhwWnZrLzBFRFo0TkR2eG10Kzh0d2dDQWRlUVlGa3A3MUluVklNUEZGcENoVjJTaDY3YVRGdUQxQTlMQ1E9PQo="
     },
     "darwin-aarch64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.0/Moonshift.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYXl2M3o4a3c5UjJMSUFsRm0wdnFTUWxob2Q5bXlvemdhTVFGdFFUdzZlbURWN0kxdnZIUFlNT0hmTTJDQ2htdi8vdXpBQ25nZGdQZS9zTnNTQ3VSMWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzAwMDc2CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKN0RPc2hnTkVDNHE0TmYrTlJ0enA3ZmRUVjFpSGE2N2RXWlVQQmphVENYUERjcE9CZVdCOFNuanovaExuVkJGb0lreDVxZ3FheDRvZmVoMVZqQVhIQnc9PQo="
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.1/Moonshift.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYS9UYWx6ODBOV2trWGlRdUFNTUc5c291QmZHc2VOa1V5Z2RhYWtOR0NXd2dQSVNRUGFnd1ZEM0hobEUxSFB0QUgyTTFvSisvZ0FXZE9FdUE2aWoyc0FJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NDk0MTc0CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKTktUQ0RKcGE1VlNia0lUalBLNDg0NWxvL3laYUNPTXJ0WTdtVUFKSXRZWlRZa3JvWGJHWksxOGp1Vnhrb1d5WEJpRlFNMERZMXdXeFpESEtRdlhwRHc9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.0/Moonshift.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYXl2M3o4a3c5UjJMSUFsRm0wdnFTUWxob2Q5bXlvemdhTVFGdFFUdzZlbURWN0kxdnZIUFlNT0hmTTJDQ2htdi8vdXpBQ25nZGdQZS9zTnNTQ3VSMWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzAwMDc2CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKN0RPc2hnTkVDNHE0TmYrTlJ0enA3ZmRUVjFpSGE2N2RXWlVQQmphVENYUERjcE9CZVdCOFNuanovaExuVkJGb0lreDVxZ3FheDRvZmVoMVZqQVhIQnc9PQo="
+      "url": "https://github.com/Meet090201vora/ghostapply-releases/releases/download/v0.6.1/Moonshift.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTlB5UDhoM05aYS9UYWx6ODBOV2trWGlRdUFNTUc5c291QmZHc2VOa1V5Z2RhYWtOR0NXd2dQSVNRUGFnd1ZEM0hobEUxSFB0QUgyTTFvSisvZ0FXZE9FdUE2aWoyc0FJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NDk0MTc0CWZpbGU6TW9vbnNoaWZ0LmFwcC50YXIuZ3oKTktUQ0RKcGE1VlNia0lUalBLNDg0NWxvL3laYUNPTXJ0WTdtVUFKSXRZWlRZa3JvWGJHWksxOGp1Vnhrb1d5WEJpRlFNMERZMXdXeFpESEtRdlhwRHc9PQo="
     }
   }
 }
